@@ -6,12 +6,19 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/22 21:40:28 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 23:01:05 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-
+/*
+if (PRINT)
+{
+	enemy->target_struck = 1;
+	enemy->square.x = 31;
+	enemy->square.y = 14;
+}
+*/
 void	init_player(t_map *map)
 {
 	char	*line;
@@ -59,8 +66,18 @@ int		main()
 			return (0);
 		}
 		read_figure(&figure);
-		solver(&map, &enemy, &figure);
+		closest_enemy_pos(&enemy, &map);
+		if (PRINT)
+		{
+			enemy.target_struck = 1;
+			enemy.square.x = 31;
+			enemy.square.y = 14;
+		}
+		(PRINT) ? map_print(&map) : 1;
+		find_possible_spot(&map, &figure, &enemy);
+		//	solver(&map, &enemy, &figure);
 		//find_possible_spot(&map, &figure, &enemy);
+		(PRINT) ? map_print(&map) : 1;
 		clean_data(&map, &figure);
 		i++;
 	}

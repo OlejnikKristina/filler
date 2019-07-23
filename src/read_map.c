@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 18:09:45 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 22:11:27 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static	void	map_parse(t_map *map)
 	char		*line;
 
 	y = 0;
-	map->map = (char **)malloc(sizeof(char *) * map->max_y + 5);
+	map->map = (char **)malloc(sizeof(char *) * map->max_y + 1);
 	ft_dprintf(fd_test, "***** MAP ******\n");
 	ft_dprintf(fd_test, "    0123456789012345678901234567890123456789\n");
 	while (y < map->max_y)
@@ -48,13 +48,13 @@ static	void	map_parse(t_map *map)
 		y++;
 	}
 	ft_dprintf(fd_test, "    0123456789012345678901234567890123456789\n");
-	while (y < map->max_y + 4)
-	{
-		map->map[y] = ft_strnew(map->max_x + 15);
-		ft_memset((void *)map->map[y], '-', map->max_x + 14);
-		ft_dprintf(fd_test, "%s\n", map->map[y]);
-		y++;
-	}
+	// while (y < map->max_y + 4)
+	// {
+	// 	map->map[y] = ft_strnew(map->max_x + 15);
+	// 	ft_memset((void *)map->map[y], '-', map->max_x + 14);
+	// 	ft_dprintf(fd_test, "%s\n", map->map[y]);
+	// 	y++;
+	// }
 }
 
 bool	skeep_lines()
@@ -77,6 +77,5 @@ bool		read_map(t_map *map)
 	if (skeep_lines() == false)
 		return (false);
 	map_parse(map);
-	(PRINT) ? map_print(map) : 1;
 	return (true);
 }

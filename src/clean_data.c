@@ -6,24 +6,27 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 18:14:01 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 19:28:45 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 
-void		free_arr(void ***arr, size_t i)
+void		free_arr(void ***arr, size_t len)
 {
+	short int	i;
+
+	i = 0;
 	if (!**arr || !*arr || !arr)
 		return ;
-	while (i != 0)
+	while (i < len)
 	{
 		if ((*arr)[i])
 		{
 			free((*arr)[i]);
 			(*arr)[i] = NULL;
 		}
-		i--;
+		i++;
 	}
 	free(*arr);
 	*arr = NULL;

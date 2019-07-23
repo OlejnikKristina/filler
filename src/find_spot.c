@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 18:17:49 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 22:56:22 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,14 @@ bool	check_spot(char **figure, t_map *map, int map_y, int map_x)
 	int		fig_y;
 	int		map_coord_x;
 	bool	cover;
+	int		print_figure = 0;
 
 	fig_x = 0;
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = map_x;
+	(PRINT && map_y == 20 && map_x == 23)
+	? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
 		while (figure[fig_y][fig_x])
@@ -41,6 +44,13 @@ bool	check_spot(char **figure, t_map *map, int map_y, int map_x)
 					return (false);
 				else if (map->map[map_y][map_x] == 'O')
 					cover = true;
+			}
+			if (print_figure == 2 && figure[fig_y][fig_x] == '*')
+			{
+				if (map->map[map_y][map_x] == '.')
+					map->map[map_y][map_x] = '*';
+				else
+					map->map[map_y][map_x] = '$';
 			}
 			map_x++;
 			fig_x++;
@@ -87,15 +97,13 @@ void	find_spots(t_map *map, t_figure *figure,
 	int		y;
 	int		x;
 	int		max_y_field;
-	int		max_x_field;
 
 	y = 0;
 	x = 4;
-	max_y_field = max_y_filed(map, figure->cut_fig);
-	max_x_field = max_x_filed(map, figure->cut_fig[0]);
-	while (y < map->max_y)//max_y_field)
+	max_y_field = max_y_filed(map, figure->cut_fig) + 1;
+	while (y < max_y_field)
 	{
-		while (x < map->max_x + 4)// max_x_field)
+		while (x < map->max_x + 4)
 		{
 			if (check_spot(figure->cut_fig, map, y, x))
 			{
@@ -123,7 +131,11 @@ void	find_spots(t_map *map, t_figure *figure,
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_enemy *enemy)
 {
-	enemy->target_struck = 1;
+	void	**arr_struct;
+
+	// arr_struct = (void **)malloc(sizeof(t_map *) + sizeof(t_figure *) + sizeof(t_enemy *) + 1);
+	// arr_struct[0] = (void *)malloc(sizeof(map));
+	// arr_struct[0] = map;
 	if (enemy->target_struck == false)
 	{
 		find_spots(map, figure, enemy, &go_to_enemy);
