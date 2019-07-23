@@ -6,7 +6,7 @@
 #    By: krioliin <krioliin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/30 16:51:39 by krioliin       #+#    #+#                 #
-#    Updated: 2019/07/22 00:52:14 by krioliin      ########   odam.nl          #
+#    Updated: 2019/07/22 20:43:37 by krioliin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INCLUDES		=	../includes/filler.h \
 					../includes/ftpf_colors.h \
 					../includes/libft.h
 
-FILES			=	main.c -g read_map.c find_spot.c \
+FILES			=	main.c read_map.c find_spot.c \
 					read_figure.c cut_figure.c clean_data.c \
 					print_map.c closest_enemy_pos.c solver.c \
 					max_xy_field.c add_node.c surround_enemy.c
@@ -28,7 +28,7 @@ FILES			=	main.c -g read_map.c find_spot.c \
 all: $(NAME)
 
 $(NAME):
-	clang -o $(NAME) $(FILES) -I./includes/ $(LIB)
+	clang -o $(NAME) -g $(FILES) -I./includes/ $(LIB)
 test:
 	./filler_vm -p1 filler_krioliin/src/krioliin.filler \
 	-p2 players/carli.filler -f maps/map01

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/22 00:16:21 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 17:56:10 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@
 # include <fcntl.h>
 # include <stdbool.h>
 # include <errno.h>
-# define PRINT false
+# define PRINT true
 
 int					fd_test;
 

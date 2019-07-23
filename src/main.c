@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/21 21:02:13 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/22 21:40:28 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ int		main()
 	}
 	init_player(&map);
 	init_map_size(&map);
+	enemy.target_struck = 0;
 	while (1)
 	{
 		ft_dprintf(fd_test, "\n\n***** Run loop %d time ****\n", i + 1);

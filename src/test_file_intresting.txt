@@ -1,0 +1,4391 @@
+
+
+***** Run loop 1 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...O....................................
+004 ........................................
+005 ........................................
+006 ........................................
+007 ........................................
+008 ........................................
+009 ........................................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................X.......
+020 ........................................
+021 ........................................
+022 ........................................
+023 ........................................
+--------- READ FIGURE --------
+.......
+.......
+.......
+...****
+MAX LEFT: (x 32; y 19)
+COLUMN X (x 32|y 19)
+enemy->square: (x 36; y 32767)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 0; x 0)
+
+
+***** Run loop 2 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...OOOO.................................
+004 ........................................
+005 ........................................
+006 ........................................
+007 ........................................
+008 ........................................
+009 ........................................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................X.......
+020 ...............................XX.......
+021 ...............................X........
+022 ...............................X........
+023 ........................................
+--------- READ FIGURE --------
+*.*.*
+*****
+MAX LEFT: (x 31; y 22)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 3; x 6)
+
+
+***** Run loop 3 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...OOOO.O.O.............................
+004 ......OOOOO.............................
+005 ........................................
+006 ........................................
+007 ........................................
+008 ........................................
+009 ........................................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................X.......
+020 ...............................XX.......
+021 ...............................XX.......
+022 ...............................XX.......
+023 ...............................XX.......
+--------- READ FIGURE --------
+**.
+**.
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 4; x 10)
+
+
+***** Run loop 4 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO............................
+005 ..........OO............................
+006 ........................................
+007 ........................................
+008 ........................................
+009 ........................................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XX.......
+021 ...............................XX.......
+022 ...............................XX.......
+023 ...............................XX.......
+--------- READ FIGURE --------
+.....*.
+..****.
+...**..
+.....*.
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 4; x 9)
+
+
+***** Run loop 5 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............O.........................
+008 ........................................
+009 ........................................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX......
+021 ...............................XXX......
+022 ...............................XX.XX....
+023 ...............................XXX.X....
+--------- READ FIGURE --------
+.***..
+.***..
+.*....
+......
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 7; x 13)
+
+
+***** Run loop 6 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ........................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOO.......................
+009 ..............O.........................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX......
+021 ...............................XXXXX....
+022 ...............................XX.XX....
+023 ...............................XXX.X....
+--------- READ FIGURE --------
+*..
+*..
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 2; x 3)
+
+
+***** Run loop 7 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOO.......................
+009 ..............O.........................
+010 ........................................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX......
+021 ...............................XXXXX....
+022 ...............................XX.XX....
+023 ...............................XXX.XX...
+--------- READ FIGURE --------
+...***
+.....*
+....**
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 8; x 13)
+
+
+***** Run loop 8 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.....................
+010 .................OO.....................
+011 ........................................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX......
+021 ...............................XXXXXX...
+022 ...............................XX.XXX...
+023 ...............................XXX.XX...
+--------- READ FIGURE --------
+**
+*.
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 18)
+
+
+***** Run loop 9 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.....................
+010 .................OOO....................
+011 ..................O.....................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX......
+021 ...............................XXXXXX...
+022 ...............................XX.XXXX..
+023 ...............................XXX.XXX..
+--------- READ FIGURE --------
+.......
+...*...
+..***..
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 8; x 17)
+
+
+***** Run loop 10 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOO..................
+011 ..................O.....................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..X...
+021 ...............................XXXXXX...
+022 ...............................XX.XXXX..
+023 ...............................XXX.XXX..
+--------- READ FIGURE --------
+....
+***.
+*...
+....
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 9; x 21)
+
+
+***** Run loop 11 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOO................
+011 ..................O..O..................
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..X...
+021 ...............................XXXXXX...
+022 ...............................XX.XXXX..
+023 ...............................XXXXXXX..
+--------- READ FIGURE --------
+....
+.***
+..*.
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 9; x 22)
+
+
+***** Run loop 12 time ****
+***** MAP ******
+000 ........................................
+001 ........................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOO..............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..X...
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXX.
+023 ...............................XXXXXXXX.
+--------- READ FIGURE --------
+.......
+*......
+*......
+*......
+MAX LEFT: (x 31; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 35; y 19)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y -1; x 3)
+
+
+***** Run loop 13 time ****
+***** MAP ******
+000 ...O....................................
+001 ...O....................................
+002 ...O....................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOO..............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..X...
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXX.
+023 ..............................XXXXXXXXX.
+--------- READ FIGURE --------
+......*
+......*
+.....**
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 0; x -2)
+
+
+***** Run loop 14 time ****
+***** MAP ******
+000 ...OO...................................
+001 ...OO...................................
+002 ...OO...................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOO..............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..XXX.
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXX.
+023 ..............................XXXXXXXXX.
+--------- READ FIGURE --------
+.*
+.*
+.*
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 1; x 4)
+
+
+***** Run loop 15 time ****
+***** MAP ******
+000 ...OO...................................
+001 ...OOO..................................
+002 ...OOO..................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOO..............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX..XXX.
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.*...
+.*...
+*....
+*....
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 0; x 6)
+
+
+***** Run loop 16 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOO..............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXX.XXXX.
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 24)
+
+
+***** Run loop 17 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOO.............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX......
+020 ...............................XXXXXXXX.
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**..
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 25)
+
+
+***** Run loop 18 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOO............
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 ...............................XXXXXXXXX
+022 ...............................XX.XXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**....
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 26)
+
+
+***** Run loop 19 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOO...........
+011 ..................O..O..O...............
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 ........................................
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 ...............................XXXXXXXXX
+022 ...............................XXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**.
+.***
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 32; y 19)
+enemy->square: (x 34; y 19)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 27)
+
+
+***** Run loop 20 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOOO..........
+011 ..................O..O..O...OOO.........
+012 ........................................
+013 ........................................
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 .......................................X
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 ...............................XXXXXXXXX
+022 ...............................XXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**.
+..**
+..*.
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 39; y 18)
+enemy->square: (x 34; y 18)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 11; x 29)
+
+
+***** Run loop 21 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOOO..........
+011 ..................O..O..O...OOOO........
+012 ...............................OO.......
+013 ...............................O........
+014 ........................................
+015 ........................................
+016 ........................................
+017 ........................................
+018 .......................................X
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 ..............................XXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.....**
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 39; y 18)
+enemy->square: (x 34; y 18)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 11; x 22)
+
+
+***** Run loop 22 time ****
+***** MAP ******
+000 ...OO..O................................
+001 ...OOO.O................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOOO..........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ...............................O........
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 .....................................XXX
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 ..............................XXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.
+*
+*
+*
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 34; y 17)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y -1; x 6)
+
+
+***** Run loop 23 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOOO..........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ...............................O........
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 .....................................XXX
+019 ................................XX.....X
+020 ...............................XXXXXXXXX
+021 .............................XXXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+....**
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 34; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 10; x 25)
+
+
+***** Run loop 24 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O...................
+010 .................OOOOOOOOOOOOOO.........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ...............................O........
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 .....................................XXX
+019 ................................XX...XXX
+020 ...............................XXXXXXXXX
+021 .............................XXXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+..***..
+....*..
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 34; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 9; x 26)
+
+
+***** Run loop 25 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOO.........
+010 .................OOOOOOOOOOOOOO.........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ...............................O........
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 .....................................XXX
+019 ............................XX..XX...XXX
+020 ...........................XXXXXXXXXXXXX
+021 ............................XXXXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+...**
+.....
+.....
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 34; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 27)
+
+
+***** Run loop 26 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOO.........
+010 .................OOOOOOOOOOOOOO.........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ..............................OO........
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 ...................................X.XXX
+019 ............................XX..XX.X.XXX
+020 ...........................XXXXXXXXXXXXX
+021 ............................XXXXXXXXXXXX
+022 .............................XXXXXXXXXXX
+023 ..............................XXXXXXXXXX
+--------- READ FIGURE --------
+.**.
+....
+MAX LEFT: (x 30; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 34; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 30)
+
+
+***** Run loop 27 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOO.........
+010 .................OOOOOOOOOOOOOO.........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ..............................OOO.......
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XX.
+018 ...................................X.XXX
+019 ............................XX..XX.X.XXX
+020 ...........................XXXXXXXXXXXXX
+021 ............................XXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+**
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 32; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 32)
+
+
+***** Run loop 28 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOO.........
+010 .................OOOOOOOOOOOOOO.........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ..............................OOOO......
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XXX
+018 ...................................X.XXX
+019 ............................XX..XX.X.XXX
+020 ...........................XXXXXXXXXXXXX
+021 ............................XXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+...**
+....*
+.....
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 32; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 9; x 27)
+
+
+***** Run loop 29 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOO........
+012 ...............................OO.......
+013 ..............................OOOO......
+014 ........................................
+015 ........................................
+016 ........................................
+017 .....................................XXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 .........................XXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+..**
+....
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 37; y 17)
+enemy->square: (x 32; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 11; x 29)
+
+
+***** Run loop 30 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 ..............................OOOO......
+014 ........................................
+015 ........................................
+016 ........................................
+017 ...................................XXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 .........................XXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+**....
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 35; y 17)
+enemy->square: (x 32; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 29)
+
+
+***** Run loop 31 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOO......
+014 ........................................
+015 ........................................
+016 ........................................
+017 ...................................XXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+..
+..
+**
+.*
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 35; y 17)
+enemy->square: (x 32; y 17)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 11; x 33)
+
+
+***** Run loop 32 time ****
+***** MAP ******
+000 ...OO.OO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ..................................O.....
+015 .......................................X
+016 .......................................X
+017 ...................................XXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ............................XXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+*.
+*.
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 39; y 15)
+enemy->square: (x 32; y 15)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 0; x 5)
+
+
+***** Run loop 33 time ****
+***** MAP ******
+000 ...OOOOO................................
+001 ...OOOOO................................
+002 ...OOOO.................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ..................................O.....
+015 .......................................X
+016 .......................................X
+017 ...................................XXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ...........................XXXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+*..
+*..
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 39; y 15)
+enemy->square: (x 32; y 15)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 1; x 7)
+
+
+***** Run loop 34 time ****
+***** MAP ******
+000 ...OOOOO................................
+001 ...OOOOO................................
+002 ...OOOOO................................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ..................................O.....
+015 ..................................X....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ...........................XXXXXXXXXXXXX
+022 ...........................XXXXXXXXXXXXX
+023 ............................X.XXXXXXXXXX
+--------- READ FIGURE --------
+..*.
+***.
+.**.
+.*..
+MAX LEFT: (x 28; y 23)
+MAX RIGHT: (x 34; y 15)
+enemy->square: (x 32; y 15)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 0; x 9)
+
+
+***** Run loop 35 time ****
+***** MAP ******
+000 ...OOOOO...O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ..................................O.....
+015 ..................................X....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X...X.XXXXXXXXXX
+--------- READ FIGURE --------
+...
+.*.
+.*.
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 34; y 15)
+enemy->square: (x 28; y 15)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y -1; x 8)
+
+
+***** Run loop 36 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ..................................O.....
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X...X.XXXXXXXXXX
+--------- READ FIGURE --------
+..
+.*
+**
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 33; y 15)
+enemy->square: (x 28; y 15)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 12; x 32)
+
+
+***** Run loop 37 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OO.......
+013 .............................OOOOOO.....
+014 ................................OOO.....
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X...XXXXXXXXXXXX
+--------- READ FIGURE --------
+***
+...
+...
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 33; y 15)
+enemy->square: (x 28; y 15)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 12; x 32)
+
+
+***** Run loop 38 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OOOO.....
+013 .............................OOOOOO.....
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X...XXXXXXXXXXXX
+--------- READ FIGURE --------
+**....
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 39; y 14)
+enemy->square: (x 28; y 14)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 28)
+
+
+***** Run loop 39 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OOOO.....
+013 ............................OOOOOOO.....
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.**....
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 39; y 14)
+enemy->square: (x 28; y 14)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 13; x 26)
+
+
+***** Run loop 40 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.......................
+008 ..............OOOOO.....................
+009 ..............O...O.O.......OOOO........
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OOOO.....
+013 ...........................OOOOOOOO....X
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ...................................X.XXX
+019 ..........................X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 .........................XXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+**..*
+*****
+.**..
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 39; y 13)
+enemy->square: (x 28; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 7; x 30)
+
+
+***** Run loop 41 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.............OO..O.....
+008 ..............OOOOO...........OOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ...............................OOOO.....
+013 ...........................OOOOOOOO....X
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX..........X.XXX
+019 ........................X.X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ........................XXXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+......
+......
+......
+...***
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 39; y 13)
+enemy->square: (x 28; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 9; x 26)
+
+
+***** Run loop 42 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.............OO..O.....
+008 ..............OOOOO...........OOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX..........X.XXX
+019 ........................X.X.XX..XX.X.XXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ........................XXXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+..****
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 28; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 8; x 25)
+
+
+***** Run loop 43 time ****
+***** MAP ******
+000 ...OOOOO.O.O............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.............OO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOO....X
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ........................XXXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.
+*
+*
+.
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 28; y 13)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y -1; x 10)
+
+
+***** Run loop 44 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO.............OO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOO.XXXX
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ........................XXXXXXXXXXXXXXXX
+022 ........................XX.XXXXXXXXXXXXX
+023 ........................X.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.....
+.....
+..***
+MAX LEFT: (x 24; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 28; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 5; x 26)
+
+
+***** Run loop 45 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.........................
+006 ............OO..........................
+007 ..............OOO...........OOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOO.XXXX
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXX.XXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+...**.
+...***
+..**..
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 27; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 5; x 25)
+
+
+***** Run loop 46 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.............OO..........
+006 ............OO..............OOO.........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXX.XXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+**...
+.....
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 27; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 6; x 30)
+
+
+***** Run loop 47 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O.........................
+005 ..........OOOOO.............OO..........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XX...X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+..**..
+..**..
+......
+......
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 27; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 4; x 27)
+
+
+***** Run loop 48 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO............................
+002 ...OOOOO..OO............................
+003 ...OOOO.O.O.............................
+004 ......OOOOOO..O..............OO.........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ........................XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.**....
+**.....
+***....
+*......
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 27; y 13)
+enemy->target_struck 1
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+Surround enemy BOTTON
+spot 2(y 1; x 14)
+
+
+***** Run loop 49 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO........................
+003 ...OOOO.O.O...OOO.......................
+004 ......OOOOOO..O..............OO.........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO.....
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.****.
+..**..
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 13)
+enemy->square: (x 27; y 13)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 3; x 28)
+
+
+***** Run loop 50 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO........................
+003 ...OOOO.O.O...OOO............OOOO.......
+004 ......OOOOOO..O..............OOO........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 .............................OOOOOO...X.
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XX.XXXXXXXXXXXXXX
+--------- READ FIGURE --------
+....**.
+.......
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 12)
+enemy->square: (x 27; y 12)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 12; x 24)
+
+
+***** Run loop 51 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO........................
+003 ...OOOO.O.O...OOO............OOOO.......
+004 ......OOOOOO..O..............OOO........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.......
+012 ............................OOOOOOO...X.
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XXXXXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.......
+....*..
+...**..
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 12)
+enemy->square: (x 27; y 12)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 1; x 25)
+
+
+***** Run loop 52 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO.............O..........
+003 ...OOOO.O.O...OOO...........OOOOO.......
+004 ......OOOOOO..O..............OOO........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOO........
+007 ..............OOO..........OOOOO..O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.....X.
+012 ............................OOOOOOO.XXX.
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ......................X.XXXXXXXXXXXXXXXX
+022 ......................XXXXXXXXXXXXXXXXXX
+023 .......................XXXXXXXXXXXXXXXXX
+--------- READ FIGURE --------
+....
+****
+.*..
+MAX LEFT: (x 23; y 23)
+MAX RIGHT: (x 38; y 11)
+enemy->square: (x 27; y 11)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 5; x 31)
+
+
+***** Run loop 53 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO.............O..........
+003 ...OOOO.O.O...OOO...........OOOOO.......
+004 ......OOOOOO..O..............OOO........
+005 ..........OOOOO.............OOO.........
+006 ............OO..............OOOOOOO.....
+007 ..............OOO..........OOOOOO.O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO.......
+010 .................OOOOOOOOOOOOOOO........
+011 ..................O..O..O..OOOOOO.....X.
+012 ............................OOOOOOO.XXX.
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ....................XXX.XXXXXXXXXXXXXXXX
+022 .....................XXXXXXXXXXXXXXXXXXX
+023 .....................XXXXXXXXXXXXXXXXXXX
+--------- READ FIGURE --------
+.**..
+MAX LEFT: (x 21; y 23)
+MAX RIGHT: (x 38; y 11)
+enemy->square: (x 25; y 11)
+enemy->target_struck 1
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+Surround enemy RIGHT WALL
+spot 2(y 5; x 29)
+
+
+***** Run loop 54 time ****
+***** MAP ******
+000 ...OOOOO.OOO............................
+001 ...OOOOO.OOO...OO.......................
+002 ...OOOOO..OO..OO.............O..........
+003 ...OOOO.O.O...OOO...........OOOOO.......
+004 ......OOOOOO..O..............OOO........
+005 ..........OOOOO.............OOOO........
+006 ............OO..............OOOOOOO.....
+007 ..............OOO..........OOOOOO.O.....
+008 ..............OOOOO........OOOOOOOO.....
+009 ..............O...O.O.......OOOOO....X..
+010 .................OOOOOOOOOOOOOOO.....X..
+011 ..................O..O..O..OOOOOO....XX.
+012 ............................OOOOOOO.XXX.
+013 ...........................OOOOOOOO...XX
+014 ................................OOOXXXXX
+015 .................................XX....X
+016 ..................................XXX..X
+017 .................................XXXXXXX
+018 ......................XXX.........XXXXXX
+019 ........................X.X.XX..XX.XXXXX
+020 ....................XXX.XXXXXXXXXXXXXXXX
+021 ....................XXX.XXXXXXXXXXXXXXXX
+022 .....................XXXXXXXXXXXXXXXXXXX
+023 .....................XXXXXXXXXXXXXXXXXXX
+--------- READ FIGURE --------
+*
+*
+MAX LEFT: (x 21; y 23)
+MAX RIGHT: (x 37; y 9)
+enemy->square: (x 25; y 9)
+enemy->target_struck 1
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+Surround enemy TOP
+spot 2(y 22; x 0)
+
+
+***** Run loop 55 time ****
+Can not read from stdin

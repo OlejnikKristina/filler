@@ -6,14 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/22 01:06:29 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/23 18:17:49 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-
-// if (enemy->square.x <= ((float)*x * (float)0.2)
-// 		&& enemy->square.y <= ((float)*y * (float)0.2))
 
 /*
 ** {coord_x coord_y}
@@ -22,7 +19,7 @@
 ** for possibility to put
 ** a figure
 */
-
+//target_struck
 bool	check_spot(char **figure, t_map *map, int map_y, int map_x)
 {
 	int		fig_x;
@@ -61,6 +58,11 @@ bool	go_to_enemy(t_enemy *enemy, t_map *map, int *y, int *x)
 	int static pre_x = 0;
 	int static pre_y = 0;
 
+	if (enemy->stop_checking)
+	{
+		*x = pre_x;
+		*y = pre_y;
+	}
 	if (pre_x <= *x && pre_y <= *y)
 	{
 		if (*x <= enemy->square.x && *y <= enemy->square.y)
@@ -70,22 +72,11 @@ bool	go_to_enemy(t_enemy *enemy, t_map *map, int *y, int *x)
 		}
 	}
 
-	if (enemy->square.x - 9 <= *x
-		&& enemy->square.y - 3 <= *y)
+	if (enemy->square.x - 12 <= *x && enemy->square.y - 5 <= *y)
 	{
 		ft_dprintf(fd_test, "Hit the target\n");
 		enemy->target_struck = 1;
 		return (true);
-	}
-	if (pre_x == 0 && pre_y == 0)
-	{
-		pre_x = *x;
-		pre_y = *y;
-	}
-	if (enemy->stop_checking)
-	{
-		*x = pre_x;
-		*y = pre_y;
 	}
 	return (false);
 }
@@ -100,17 +91,18 @@ void	find_spots(t_map *map, t_figure *figure,
 
 	y = 0;
 	x = 4;
-	max_y_field = max_y_filed(map, figure->field);
-	max_x_field = max_x_filed(map, figure->field[0]);
-	while (y < max_y_field)
+	max_y_field = max_y_filed(map, figure->cut_fig);
+	max_x_field = max_x_filed(map, figure->cut_fig[0]);
+	while (y < map->max_y)//max_y_field)
 	{
-		while (x < max_x_field)
+		while (x < map->max_x + 4)// max_x_field)
 		{
 			if (check_spot(figure->cut_fig, map, y, x))
 			{
 				if (algorithm(enemy, map, &y, &x))
 				{
-					ft_printf("%d %d\n", y - cut_y_top(figure), x - cut_x_left(figure) - 4);
+					ft_printf("%d %d\n", y - cut_y_top(figure),
+					x - cut_x_left(figure) - 4);
 					ft_dprintf(fd_test, "spot 1(y %d; x %d)\n",
 					y - cut_y_top(figure), x - cut_x_left(figure) - 4);
 					return ;
@@ -131,18 +123,16 @@ void	find_spots(t_map *map, t_figure *figure,
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_enemy *enemy)
 {
-	static short int target_num;
-
-	enemy->target_struck = target_num;
-	enemy->stop_checking = false;
+	enemy->target_struck = 1;
 	if (enemy->target_struck == false)
+	{
 		find_spots(map, figure, enemy, &go_to_enemy);
-
-	ft_dprintf(fd_test, "enemy->target_struck %d", enemy->target_struck);
+		return ;
+	}
+	ft_dprintf(fd_test, "enemy->target_struck %d\n", enemy->target_struck);
 	enemy->stop_checking = false;
 	if (enemy->target_struck == 1)
 	{
-		target_num = enemy->target_struck;
 		figure_view(figure, enemy);
 		find_spots(map, figure, enemy, &surround_enemy);
 	}
