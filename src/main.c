@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 23:01:05 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/26 16:56:40 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /*
 if (PRINT)
 {
-	enemy->target_struck = 1;
+	enemy->target_hit = 1;
 	enemy->square.x = 31;
 	enemy->square.y = 14;
 }
@@ -56,7 +56,10 @@ int		main()
 	}
 	init_player(&map);
 	init_map_size(&map);
-	enemy.target_struck = 0;
+
+	enemy.target_hit = ft_strdup("Surround enemy! right wall");
+	ft_bzero((void *)&enemy, sizeof(enemy));
+	enemy.target = NULL;
 	while (1)
 	{
 		ft_dprintf(fd_test, "\n\n***** Run loop %d time ****\n", i + 1);
@@ -67,19 +70,20 @@ int		main()
 		}
 		read_figure(&figure);
 		closest_enemy_pos(&enemy, &map);
-		if (PRINT)
-		{
-			enemy.target_struck = 1;
-			enemy.square.x = 31;
-			enemy.square.y = 14;
-		}
+
+		enemy.fig_max_x = ft_strlen(figure.cut_fig[0]);
+		enemy.fig_max_y = figure.cut_y;
+
+		if (PRINT){enemy.square.x = 28;enemy.square.y = 12;}
 		(PRINT) ? map_print(&map) : 1;
 		find_possible_spot(&map, &figure, &enemy);
-		//	solver(&map, &enemy, &figure);
-		//find_possible_spot(&map, &figure, &enemy);
+
 		(PRINT) ? map_print(&map) : 1;
-		clean_data(&map, &figure);
+	
+		clean_data(&map, &figure, &enemy);
 		i++;
 	}
+	if (enemy.target_hit)
+		ft_strdel(&enemy.target_hit);
 	return (0);
 }

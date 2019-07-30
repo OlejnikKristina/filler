@@ -6,21 +6,23 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 23:57:34 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/30 19:48:30 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 //if (*x <= pre_x && (pre_y <= *y && *y <= enemy->square.y))
+//if (pre_x <= *x) //&& (pre_y - 2 <= *y && *y <= enemy->square.y + 5))
+//if (pre_y <= *y) BOTTOM
 void	figure_view(t_figure *figure, t_enemy *enemy)
 {
 	if (figure->cut_y <= ft_strlen(figure->cut_fig[0]) - 1)
-		enemy->figure_view = 'v';
-	else
 		enemy->figure_view = 'h';
+	else
+		enemy->figure_view = 'v';
 }
-// from vm spot				y20;x19;
-// from test map spot		y19;x21;
+// from vm spot				y18;x21;
+// from test map spot		y16;x20;
 // mine choosen best spot	y20;x15
 
 int		target_rw(t_map *map, char enemy_chr)
@@ -64,34 +66,6 @@ int		mnhtn_rw(int i, int j, int x, int y)
 	if (second_mod < 0)
 		second_mod *= -1;
 	return (first_mod + second_mod);
-}
-
-void	right_wall(t_enemy *enemy, t_map *map, int *y, int *x)
-{
-	int static		pre_x;
-	int static		pre_y;
-	int static		manh_distance;
-
-	if (enemy->stop_checking)
-	{
-		*x = pre_x;
-		*y = pre_y;
-		pre_x = 0;
-		pre_y = 0;
-		if (manh_distance <= 2)
-			enemy->target_struck = 2;
-	}
-	if (pre_x == 0 && pre_y == 0)
-		manh_distance = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
-	//if (pre_x <= *x) //&& (pre_y - 2 <= *y && *y <= enemy->square.y + 5))
-	if (mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y) <= manh_distance)
-	{
-		pre_x = *x;
-		pre_y = *y;
-		manh_distance = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
-	}
-	//ft_dprintf(fd_test, " RIGHT WALL\n");
-	ft_dprintf(fd_test, " manh_distance: %d\n", manh_distance);
 }
 
 void	left_wall(t_enemy *enemy, t_map *map, int *y, int *x)
@@ -140,11 +114,38 @@ int		target_bottom(t_map *map, char enemy_chr)
 	return (x);
 }
 
-void	botton(t_enemy *enemy, t_map *map, int *y, int *x)
+int		target_top(t_map *map, char enemy_chr, bool enemy_from_right)
 {
-	int static		pre_x;
-	int static		pre_y;
-	int static		manh_distance;
+	short		x;
+	short		y;
+	short		my_topest_open_spot;
+
+	y = 0;
+	x = map->max_x;
+	while (4 <= x)
+	{
+		while (y < map->max_y)
+		{
+			if (map->map[y][x] == map->player)
+			{
+				ft_dprintf(fd_test, "topest open right spot y%d x%d\n", y, x);
+				return (0);
+			}
+			if (map->map[y][x] == enemy_chr)
+				break ;
+			y++;
+		}
+		x--;
+		y = 0;
+	}
+	return (0);
+}
+
+void	right_wall(t_enemy *enemy, t_map *map, int *y, int *x)
+{
+	short static		pre_x;
+	short static		pre_y;
+	short static		manhdst;
 
 	if (enemy->stop_checking)
 	{
@@ -152,17 +153,47 @@ void	botton(t_enemy *enemy, t_map *map, int *y, int *x)
 		*y = pre_y;
 		pre_x = 0;
 		pre_y = 0;
+		if (enemy->fig_max_x <= *x + enemy->fig_max_x)
+			enemy->hit_right = true;
+		ft_dprintf(fd_test, "Target --> RIGHT WALL\n");
 	}
 	if (pre_x == 0 && pre_y == 0)
-		manh_distance = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
-	//if (pre_y <= *y)
-	if (mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manh_distance)
+		manhdst = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
+	if (mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y) <= manhdst)
 	{
 		pre_x = *x;
 		pre_y = *y;
-		manh_distance = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
+		manhdst = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
 	}
-	ft_dprintf(fd_test, " BOTTON\n");
+}
+
+void	bottom(t_enemy *enemy, t_map *map, int *y, int *x)
+{
+	int static		pre_x;
+	int static		pre_y;
+	int static		manhdst;
+
+	if (enemy->stop_checking)
+	{
+		*x = pre_x;
+		*y = pre_y;
+		pre_x = 0;
+		pre_y = 0;
+		if (enemy->fig_max_y + *y == map->max_y)
+		{
+			enemy->hit_bottom = true;
+			return ;
+		}
+		ft_dprintf(fd_test, "Target --> BOTTOM Final ManhDst: %d\n", manhdst);
+	}
+	if (pre_x == 0 && pre_y == 0)
+		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
+	if (mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manhdst)
+	{
+		pre_x = *x;
+		pre_y = *y;
+		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
+	}
 }
 
 void	top(t_enemy *enemy, t_map *map, int *y, int *x)
@@ -187,27 +218,20 @@ void	top(t_enemy *enemy, t_map *map, int *y, int *x)
 
 bool	surround_enemy(t_enemy *enemy, t_map *map, int *y, int *x)
 {
-	char			*target;
-	int static		pre_x = 0;
-	int static		pre_y = 0;
-
-	ft_dprintf(fd_test, "Surround enemy");
-	if (enemy->figure_view == 'v' && enemy->target_struck != 2)
+	//target_top(map, map->enemy, 0);
+	if ((enemy->figure_view == 'h' && !enemy->hit_right) || enemy->hit_bottom)
 	{
-		//target = choose_target(enemy, map, y, x); 20
 	//	if (map->max_x / 2 <= enemy->square.x)
 			right_wall(enemy, map, y, x);
 	// 	else
 	// 		left_wall(enemy, map, y, x);
 	}
-	else if (enemy->figure_view == 'h')
+	else if (enemy->figure_view == 'v' || enemy->hit_right)
 	{
 	//	if (map->max_y / 2 <= enemy->square.y)
-			botton(enemy, map, y, x);
+			bottom(enemy, map, y, x);
 	// 	else
 	//		top(enemy, map, y, x);
 	}
-
-
 	return (false);
 }

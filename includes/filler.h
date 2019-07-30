@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 22:57:56 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/30 18:21:16 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,18 @@ typedef struct		s_enemy
 	t_coord			right;
 	t_coord			square;
 	t_coord			my;
-	short int		target_struck;
-	bool			stop_checking;
+	char			*target_hit;
 	char			figure_view;
+	int				fig_max_x;
+	int				fig_max_y;
+	bool			stop_checking;
+
+	char			*target;
+	bool			surround_enemy;
+	bool			hit_bottom;
+	bool			hit_top;
+	bool			hit_left;
+	bool			hit_right;
 }					t_enemy;
 
 /*
@@ -114,7 +123,7 @@ short				max_y_filed(t_map *map, char **figure);
 ** ********************** Clean data ************************************
 */
 
-void				clean_data(t_map *map, t_figure *figure);
+void				clean_data(t_map *map, t_figure *figure, t_enemy *enemy);
 void				free_arr(void ***arr, size_t i);
 void				field_del(char **str, int size);
 void				map_del(t_map *map);

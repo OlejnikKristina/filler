@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 16:04:33 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/26 11:11:47 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,4 +115,5 @@ void	closest_enemy_pos(t_enemy *enemy, t_map *map)
 
 	ft_dprintf(fd_test, "enemy->square: (x %d; y %d)\n",
 	enemy->square.x - 4, enemy->square.y);
+
 }

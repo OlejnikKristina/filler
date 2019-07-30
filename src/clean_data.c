@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 19:28:45 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/26 13:37:35 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	field_del(char **str, int size)
 
 
 
-void	clean_data(t_map *map, t_figure *figure)
+void	clean_data(t_map *map, t_figure *figure, t_enemy *enemy)
 {
 	// field_del(map->map, map->max_y);
 	// field_del(figure->field, figure->size_y);

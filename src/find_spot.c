@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/23 22:56:22 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/30 18:19:13 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 ** for possibility to put
 ** a figure
 */
-//target_struck
-bool	check_spot(char **figure, t_map *map, int map_y, int map_x)
+
+bool	check_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
 {
 	int		fig_x;
 	int		fig_y;
@@ -32,7 +32,7 @@ bool	check_spot(char **figure, t_map *map, int map_y, int map_x)
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = map_x;
-	(PRINT && map_y == 20 && map_x == 23)
+	(PRINT && map_y == (16 + cut_y_top(fig))  && map_x == (20 + cut_x_left(fig) + 4))
 	? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
@@ -81,14 +81,19 @@ bool	go_to_enemy(t_enemy *enemy, t_map *map, int *y, int *x)
 			pre_y = *y;
 		}
 	}
-
 	if (enemy->square.x - 12 <= *x && enemy->square.y - 5 <= *y)
 	{
-		ft_dprintf(fd_test, "Hit the target\n");
-		enemy->target_struck = 1;
+		enemy->target = ft_strdup("Surround enemy!");
 		return (true);
 	}
 	return (false);
+}
+
+bool	fill_map(t_enemy *enemy, t_map *map, int *y, int *x)
+{
+	if (enemy || map || *x || *y)
+		return (true);
+	return (true);
 }
 
 void	find_spots(t_map *map, t_figure *figure,
@@ -105,7 +110,7 @@ void	find_spots(t_map *map, t_figure *figure,
 	{
 		while (x < map->max_x + 4)
 		{
-			if (check_spot(figure->cut_fig, map, y, x))
+			if (check_spot(figure->cut_fig, map, y, x, figure))
 			{
 				if (algorithm(enemy, map, &y, &x))
 				{
@@ -131,19 +136,18 @@ void	find_spots(t_map *map, t_figure *figure,
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_enemy *enemy)
 {
-	void	**arr_struct;
-
-	// arr_struct = (void **)malloc(sizeof(t_map *) + sizeof(t_figure *) + sizeof(t_enemy *) + 1);
-	// arr_struct[0] = (void *)malloc(sizeof(map));
-	// arr_struct[0] = map;
-	if (enemy->target_struck == false)
-	{
-		find_spots(map, figure, enemy, &go_to_enemy);
-		return ;
-	}
-	ft_dprintf(fd_test, "enemy->target_struck %d\n", enemy->target_struck);
+//	if (PRINT){enemy->hit_right = 1;enemy->hit_top = 1;}
+//	(PRINT) ? (enemy->target_hit = 1) : 1;
+	// if (!enemy->target_hit)
+	// {
+	// 	find_spots(map, figure, enemy, &go_to_enemy);
+	// 	return ;
+	// }
 	enemy->stop_checking = false;
-	if (enemy->target_struck == 1)
+	if ((enemy->hit_right || enemy->hit_left) &&
+		(enemy->hit_top || enemy->hit_bottom))
+		find_spots(map, figure, enemy, &fill_map);
+	else
 	{
 		figure_view(figure, enemy);
 		find_spots(map, figure, enemy, &surround_enemy);
