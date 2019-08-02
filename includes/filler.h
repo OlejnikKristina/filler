@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/30 18:21:16 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/02 15:38:11 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@
 # define PRINT false
 
 int					fd_test;
+int					y_cut_top;
+int					x_cut_left;
 
 typedef struct		s_map
 {
@@ -67,7 +69,7 @@ typedef struct		s_coord
 **
 */
 
-typedef struct		s_enemy
+typedef struct		s_game
 {
 	t_coord			left;
 	t_coord			right;
@@ -77,25 +79,27 @@ typedef struct		s_enemy
 	char			figure_view;
 	int				fig_max_x;
 	int				fig_max_y;
+
 	bool			stop_checking;
 
 	char			*target;
-	bool			surround_enemy;
+	bool			surround_game;
 	bool			hit_bottom;
 	bool			hit_top;
 	bool			hit_left;
 	bool			hit_right;
-}					t_enemy;
+	bool			reset;
+}					t_game;
 
 /*
 ** ************************** Attack *********************************
 */
 
-void				solver(t_map *map, t_enemy *enemy, t_figure *figure);
-void				closest_enemy_pos(t_enemy *enemy, t_map *map);
-bool				surround_enemy(t_enemy *enemy, t_map *map, int *y, int *x);
+void				solver(t_map *map, t_game *game, t_figure *figure);
+void				closest_enemy_pos(t_game *game, t_map *map);
+bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
 
-void				figure_view(t_figure *figure, t_enemy *enemy);
+void				figure_view(t_figure *figure, t_game *game);
 bool				read_map(t_map *map);
 void				add_spot(t_spot **spot_top, int y, int x);
 
@@ -115,7 +119,7 @@ short unsigned		cut_x_right(t_figure *figure);
 */
 
 void				find_possible_spot(t_map *map, t_figure *figure,
-					t_enemy *enemy);
+					t_game *game);
 int					max_x_filed(t_map *map, char *figure);
 short				max_y_filed(t_map *map, char **figure);
 
@@ -123,7 +127,7 @@ short				max_y_filed(t_map *map, char **figure);
 ** ********************** Clean data ************************************
 */
 
-void				clean_data(t_map *map, t_figure *figure, t_enemy *enemy);
+void				clean_data(t_map *map, t_figure *figure, t_game *game);
 void				free_arr(void ***arr, size_t i);
 void				field_del(char **str, int size);
 void				map_del(t_map *map);

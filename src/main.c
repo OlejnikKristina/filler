@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/01 11:01:55 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/02 15:37:11 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		main()
 {
 	t_map		map;
 	t_figure	figure;
-	t_enemy		enemy;
+	t_game		game;
 	int			i;
 
 	i = 0;
@@ -57,9 +57,9 @@ int		main()
 	init_player(&map);
 	init_map_size(&map);
 
-	enemy.target_hit = ft_strdup("Surround enemy! right wall");
-	ft_bzero((void *)&enemy, sizeof(enemy));
-	enemy.target = NULL;
+	game.target_hit = ft_strdup("Surround game! right wall");
+	ft_bzero((void *)&game, sizeof(game));
+	game.target = NULL;
 	while (1)
 	{
 		ft_dprintf(fd_test, "\n\n***** Run loop %d time ****\n", i + 1);
@@ -69,21 +69,21 @@ int		main()
 			return (0);
 		}
 		read_figure(&figure);
-		closest_enemy_pos(&enemy, &map);
+		closest_enemy_pos(&game, &map);
 
-		enemy.fig_max_x = ft_strlen(figure.cut_fig[0]);
-		enemy.fig_max_y = figure.cut_y;
+		game.fig_max_x = ft_strlen(figure.cut_fig[0]);
+		game.fig_max_y = figure.cut_y;
 
-		//if (PRINT){enemy.square.x = 34;enemy.square.y = 6;}
+		//if (PRINT){game.square.x = 34;game.square.y = 6;}
 		///(PRINT) ? map_print(&map) : 1;
-		find_possible_spot(&map, &figure, &enemy);
+		find_possible_spot(&map, &figure, &game);
 
 		(PRINT) ? map_print(&map) : 1;
 	
-		clean_data(&map, &figure, &enemy);
+		clean_data(&map, &figure, &game);
 		i++;
 	}
-	if (enemy.target_hit)
-		ft_strdel(&enemy.target_hit);
+	if (game.target_hit)
+		ft_strdel(&game.target_hit);
 	return (0);
 }

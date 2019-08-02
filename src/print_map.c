@@ -6,13 +6,13 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/01 17:31:15 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/02 13:31:55 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-/* 
-bool	right_wall(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *temp_y)
+/*
+bool	right_wall(t_enemy *enemy, t_map *map, int *y, int *x, bool reset)
 {
 	int static		pre_x;
 	int static		pre_y;
@@ -20,6 +20,14 @@ bool	right_wall(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *te
 
 	ft_dprintf(fd_test, "Coord to check y%d x%d mnht %d\n",
 	*y - y_cut_top, *x - x_cut_left - 4, manhdst);
+	if (reset == 0)
+	{
+		ft_dprintf(fd_test, "First coordinat bottom\n");
+		pre_x = 0;
+		pre_y = 0;
+		manhdst = 1000;
+		reset = 1;
+	}
 	if (enemy->stop_checking)
 	{
 		*x = pre_x;
@@ -48,20 +56,27 @@ bool	right_wall(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *te
 	{
 		pre_x = *x;
 		pre_y = *y;
-		*temp_x = *x;
-		*temp_y = *y;
 		manhdst = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
 		return (true);
 	}
 	return (false);
 }
 
-bool	bottom(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *temp_y)
+bool	bottom(t_enemy *enemy, t_map *map, int *y, int *x,
+int *temp_x, int *temp_y, bool reset)
 {
 	int static		pre_x;
 	int static		pre_y;
 	int static		manhdst;
 
+	if (reset == 0)
+	{
+		ft_dprintf(fd_test, "First coordinat bottom\n");
+		pre_x = 0;
+		pre_y = 0;
+		manhdst = 1000;
+		reset = 1;
+	}
 	if (enemy->stop_checking)
 	{
 		*x = pre_x;
@@ -78,15 +93,6 @@ bool	bottom(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *temp_y
 		enemy->stop_checking = false;
 		ft_dprintf(fd_test, "Target --> BOTTOM Final ManhDst: %d\n", manhdst);
 	}
-	if (*y == 0 && *x == 4)
-	{
-		ft_dprintf(fd_test, "First coordinat bottom\n");
-		pre_x = 0;
-		pre_y = 0;
-	}
-	if (pre_x == 0 && pre_y == 0)
-		manhdst = 1000;
-//		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
 	if (mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manhdst)
 	{
 		pre_x = *x;
@@ -97,8 +103,7 @@ bool	bottom(t_enemy *enemy, t_map *map, int *y, int *x, int *temp_x, int *temp_y
 		return (true);
 	}
 	return (false);
-}*/
-
+} */
 void	map_print(t_map *map)
 {
 	unsigned	y;

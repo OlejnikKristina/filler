@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/31 19:39:24 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/02 15:38:32 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,41 +106,41 @@ bool	check_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
 	return (cover);
 }
 
-bool	go_to_enemy(t_enemy *enemy, t_map *map, int *y, int *x)
+bool	go_to_game(t_game *game, t_map *map, int *y, int *x)
 {
 	int static pre_x = 0;
 	int static pre_y = 0;
 
-	if (enemy->stop_checking)
+	if (game->stop_checking)
 	{
 		*x = pre_x;
 		*y = pre_y;
 	}
 	if (pre_x <= *x && pre_y <= *y)
 	{
-		if (*x <= enemy->square.x && *y <= enemy->square.y)
+		if (*x <= game->square.x && *y <= game->square.y)
 		{
 			pre_x = *x;
 			pre_y = *y;
 		}
 	}
-	if (enemy->square.x - 12 <= *x && enemy->square.y - 5 <= *y)
+	if (game->square.x - 12 <= *x && game->square.y - 5 <= *y)
 	{
-		enemy->target = ft_strdup("Surround enemy!");
+		game->target = ft_strdup("Surround game!");
 		return (true);
 	}
 	return (false);
 }
 
-bool	fill_map(t_enemy *enemy, t_map *map, int *y, int *x)
+bool	fill_map(t_game *game, t_map *map, int *y, int *x)
 {
-	if (enemy || map || *x || *y)
+	if (game || map || *x || *y)
 		return (true);
 	return (true);
 }
 
 void	find_spots(t_map *map, t_figure *figure,
-		t_enemy *enemy, bool (*algorithm)(t_enemy *, t_map *, int *, int *))
+		t_game *game, bool (*algorithm)(t_game *, t_map *, int *, int *))
 {
 	int		y;
 	int		x;
@@ -157,7 +157,7 @@ void	find_spots(t_map *map, t_figure *figure,
 		{
 			if (check_spot(figure->cut_fig, map, y, x, figure))
 			{
-				if (algorithm(enemy, map, &y, &x))
+				if (algorithm(game, map, &y, &x))
 				{
 					ft_printf("%d %d\n", y - cut_y_top(figure),
 					 x - cut_x_left(figure) - 4);
@@ -172,8 +172,8 @@ void	find_spots(t_map *map, t_figure *figure,
 		x = 4;
 		y++;
 	}
-	enemy->stop_checking = true;
-	algorithm(enemy, map, &y, &x);
+	game->stop_checking = true;
+	algorithm(game, map, &y, &x);
 	ft_printf("%d %d\n", y - cut_y_top(figure), x - cut_x_left(figure) - 4);
 	ft_dprintf(fd_test, "spot 2(y %d; x %d)\n",
 	y - cut_y_top(figure), 
@@ -181,15 +181,15 @@ void	find_spots(t_map *map, t_figure *figure,
 }
 
 
-void	find_possible_spot(t_map *map, t_figure *figure, t_enemy *enemy)
+void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
-	enemy->stop_checking = false;
-	if ((enemy->hit_right || enemy->hit_left) &&
-		(enemy->hit_top || enemy->hit_bottom))
-		find_spots(map, figure, enemy, &fill_map);
+	game->stop_checking = false;
+	if ((game->hit_right || game->hit_left) &&
+		(game->hit_top || game->hit_bottom))
+		find_spots(map, figure, game, &fill_map);
 	else
 	{
-		figure_view(figure, enemy);
-		find_spots(map, figure, enemy, &surround_enemy);
+		figure_view(figure, game);
+		find_spots(map, figure, game, &surround_enemy);
 	}
 }
