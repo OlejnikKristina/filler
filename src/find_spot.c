@@ -6,11 +6,54 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/30 18:19:13 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/07/31 19:39:24 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
+
+bool	print_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
+{
+	int		fig_x;
+	int		fig_y;
+	int		map_coord_x;
+	bool	cover;
+	int		print_figure = 2;
+
+	fig_x = 0;
+	fig_y = 0;
+	cover = 0;
+	map_coord_x = map_x;
+	// (PRINT && map_y == (15 + cut_y_top(fig))  && map_x == (25 + cut_x_left(fig) + 4))
+	// ? (print_figure = 2) : 0;
+	while (figure[fig_y])
+	{
+		while (figure[fig_y][fig_x])
+		{
+			if (map->map[map_y][map_x] != '.' && figure[fig_y][fig_x] == '*')
+			{
+				if (cover)
+					return (false);
+				else if (map->map[map_y][map_x] == 'O')
+					cover = true;
+			}
+			if (print_figure == 2 && figure[fig_y][fig_x] == '*')
+			{
+				if (map->map[map_y][map_x] == '.')
+					map->map[map_y][map_x] = '*';
+				else
+					map->map[map_y][map_x] = '$';
+			}
+			map_x++;
+			fig_x++;
+		}
+		fig_x = 0;
+		map_x = map_coord_x;
+		fig_y++;
+		map_y++;
+	}
+	return (cover);
+}
 
 /*
 ** {coord_x coord_y}
@@ -32,8 +75,8 @@ bool	check_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = map_x;
-	(PRINT && map_y == (16 + cut_y_top(fig))  && map_x == (20 + cut_x_left(fig) + 4))
-	? (print_figure = 2) : 0;
+	// (PRINT && map_y == (15 + cut_y_top(fig))  && map_x == (25 + cut_x_left(fig) + 4))
+	// ? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
 		while (figure[fig_y][fig_x])
@@ -105,7 +148,9 @@ void	find_spots(t_map *map, t_figure *figure,
 
 	y = 0;
 	x = 4;
-	max_y_field = max_y_filed(map, figure->cut_fig) + 1;
+	max_y_field = max_y_filed(map, figure->cut_fig + 1);
+	y_cut_top = cut_y_top(figure);
+	x_cut_left = cut_x_left(figure);
 	while (y < max_y_field)
 	{
 		while (x < map->max_x + 4)
@@ -115,9 +160,10 @@ void	find_spots(t_map *map, t_figure *figure,
 				if (algorithm(enemy, map, &y, &x))
 				{
 					ft_printf("%d %d\n", y - cut_y_top(figure),
-					x - cut_x_left(figure) - 4);
+					 x - cut_x_left(figure) - 4);
 					ft_dprintf(fd_test, "spot 1(y %d; x %d)\n",
 					y - cut_y_top(figure), x - cut_x_left(figure) - 4);
+					//print_spot(figure->cut_fig, map, y, x, figure);
 					return ;
 				}
 			}
@@ -134,15 +180,9 @@ void	find_spots(t_map *map, t_figure *figure,
 	x - cut_x_left(figure) - 4);
 }
 
+
 void	find_possible_spot(t_map *map, t_figure *figure, t_enemy *enemy)
 {
-//	if (PRINT){enemy->hit_right = 1;enemy->hit_top = 1;}
-//	(PRINT) ? (enemy->target_hit = 1) : 1;
-	// if (!enemy->target_hit)
-	// {
-	// 	find_spots(map, figure, enemy, &go_to_enemy);
-	// 	return ;
-	// }
 	enemy->stop_checking = false;
 	if ((enemy->hit_right || enemy->hit_left) &&
 		(enemy->hit_top || enemy->hit_bottom))

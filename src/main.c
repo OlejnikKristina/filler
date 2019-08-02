@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/26 16:56:40 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/01 11:01:55 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int		main()
 		enemy.fig_max_x = ft_strlen(figure.cut_fig[0]);
 		enemy.fig_max_y = figure.cut_y;
 
-		if (PRINT){enemy.square.x = 28;enemy.square.y = 12;}
-		(PRINT) ? map_print(&map) : 1;
+		//if (PRINT){enemy.square.x = 34;enemy.square.y = 6;}
+		///(PRINT) ? map_print(&map) : 1;
 		find_possible_spot(&map, &figure, &enemy);
 
 		(PRINT) ? map_print(&map) : 1;
