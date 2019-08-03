@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/02 15:38:11 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 12:30:58 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,3 +143,32 @@ void				map_print(t_map *map);
 #define TEST_MAP "/Users/krioliin/Desktop/second_filler/filler_krioliin/src/test_map.txt"
 
 #endif
+
+
+
+int		target_top_x(t_map *map, char enemy_chr, bool enemy_from_right)
+{
+	short		x;
+	short		y;
+	short		my_topest_open_spot;
+
+	y = 0;
+	x = map->max_x;
+	while (4 <= x)
+	{
+		while (y < map->max_y)
+		{
+			if (map->map[y][x] == map->player)
+			{
+				ft_dprintf(fd_test, "topest open right spot y%d x%d\n", y, x);
+				return (x - 2);
+			}
+			if (map->map[y][x] == enemy_chr)
+				break ;
+			y++;
+		}
+		x--;
+		y = 0;
+	}
+	return (x - 2);
+}
