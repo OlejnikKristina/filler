@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 13:21:37 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 22:29:29 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int					x_cut_left;
 
 typedef struct		s_map
 {
+	char			**old_map;
 	char			**map;
 	int				max_x;
 	int				max_y;
@@ -101,10 +102,15 @@ typedef struct		s_game
 void				solver(t_map *map, t_game *game, t_figure *figure);
 void				closest_enemy_pos(t_game *game, t_map *map);
 bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
+bool				b(t_game *game, t_map *map, int *y, int *x);
+bool				block_enemy(t_game *game, t_map *map, int *y, int *x, bool reset);
+int					manheten_dist(int i, int j, int x, int y);
 
+void				reset_values(int *pre_x, int *pre_y, int *manh_dst);
 char				figure_view(t_game *game);
 bool				read_map(t_map *map);
 void				add_spot(t_spot **spot_top, int y, int x);
+void				save_old_map(t_map *map);
 
 /*
 ** ********************** Process figure* *****************************

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/02 15:31:18 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 20:24:11 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,14 +69,14 @@ void	field_del(char **str, int size)
 	str = NULL;
 }
 
-
-
 void	clean_data(t_map *map, t_figure *figure, t_game *game)
 {
 	// field_del(map->map, map->max_y);
 	// field_del(figure->field, figure->size_y);
 //	ft_bzero((void *)map, sizeof(map));
 //	ft_bzero((void *)figure, sizeof(figure));
+	if (map->map)
+		save_old_map(map);
 	free_arr((void ***)&(map->map), map->max_y);
 	free_arr((void ***)&(figure->field), figure->size_y);
 	cut_figure_del(figure);

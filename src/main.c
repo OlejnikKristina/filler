@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 18:44:16 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 22:17:26 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,7 @@ int		main()
 	init_player(&map);
 	init_map_size(&map);
 	ft_bzero((void *)&game, sizeof(game));
-	game.target_hit = ft_strdup("Surround game! right wall");
-	ft_bzero((void *)&game, sizeof(game));
-	game.target = NULL;
+	map.old_map = NULL;
 	while (1)
 	{
 		ft_dprintf(fd_test, "\n\n***** Run loop %d time ****\n", i + 1);
@@ -73,17 +71,14 @@ int		main()
 
 		game.fig_max_x = ft_strlen(figure.cut_fig[0]);
 		game.fig_max_y = figure.cut_y;
-
-		//if (PRINT){game.square.x = 34;game.square.y = 6;}
-		///(PRINT) ? map_print(&map) : 1;
 		find_possible_spot(&map, &figure, &game);
 
 		(PRINT) ? map_print(&map) : 1;
-	
+
+		(map.map) ? save_old_map(&map) : 1;
 		clean_data(&map, &figure, &game);
 		i++;
 	}
-	if (game.target_hit)
-		ft_strdel(&game.target_hit);
+	free_arr((void ***)&map.old_map, map.max_y);
 	return (0);
 }

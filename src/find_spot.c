@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 19:37:12 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 22:30:00 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@ bool	print_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = map_x;
-	// (PRINT && map_y == (15 + cut_y_top(fig))  && map_x == (25 + cut_x_left(fig) + 4))
-	// ? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
 		while (figure[fig_y][fig_x])
@@ -68,15 +66,13 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 	int		fig_x;
 	int		fig_y;
 	int		map_coord_x;
-	bool	cover = 0;
+	bool	cover;
 	int		print_figure = 0;
 
 	fig_x = 0;
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = x;
-	// (PRINT && y == (15 + cut_y_top(fig))  && x == (25 + cut_x_left(fig) + 4))
-	// ? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
 		while (figure[fig_y][fig_x])
@@ -85,8 +81,10 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 			{
 				if (cover)
 					return (false);
-				else if (map->map[y][x] == 'O')
+				else if (map->map[y][x] == map->player)
 					cover = true;
+				else if (map->map[y][x] == map->enemy)
+					return (false);
 			}
 			if (print_figure == 2 && figure[fig_y][fig_x] == '*')
 			{
@@ -184,6 +182,7 @@ void	find_spots(t_map *map, t_figure *figure,
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
 	game->stop_checking = false;
+	/*
 	if ((game->hit_right || game->hit_left) &&
 		(game->hit_top || game->hit_bottom))
 		find_spots(map, figure, game, &fill_map);
@@ -191,5 +190,7 @@ void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 		find_spots(map, figure, game, &surround_enemy);
 	
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
-	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
+	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);*/
+	game->reset = 0;
+	find_spots(map, figure, game, &b);
 }

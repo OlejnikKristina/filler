@@ -12,11 +12,11 @@
 
 #include "../includes/filler.h"
 
-void	reset_values(int *pre_x, int *pre_y, int *manhdst)
+void	reset_values(int *pre_x, int *pre_y, int *manh_dst)
 {
 	*pre_x = 0;
 	*pre_y = 0;
-	*manhdst = 1000;
+	*manh_dst = 1000;
 }
 
 char	figure_view(t_game *game)
@@ -60,7 +60,7 @@ int		target_rw(t_map *map, char game_chr)
 ** distance = |i - x| + |j - y|
 */
 
-int		mnhtn_rw(int i, int j, int x, int y)
+int		manheten_dist(int i, int j, int x, int y)
 {
 	int 		first_mod;
 	int 		second_mod;
@@ -86,7 +86,7 @@ void	left_wall(t_game *game, t_map *map, int *y, int *x)
 		pre_x = 0;
 		pre_y = 0;
 	}
-	if (pre_x <= *x && (pre_y <= *y))// && *y <= game->square.y + 5))
+	if (pre_x <= *x && (pre_y <= *y))
 	{
 		pre_x = *x;
 		pre_y = *y;
@@ -169,11 +169,11 @@ bool	top(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ft_dprintf(fd_test, "Target --> TOP Final ManhDst: %d\n", manhdst);
 		return (false);
 	}
-	if (mnhtn_rw(target_top_x(map, map->enemy, 1), 0, *x, *y) <= manhdst)
+	if (manheten_dist(target_top_x(map, map->enemy, 1), 0, *x, *y) <= manhdst)
 	{
 		pre_x = *x;
 		pre_y = *y;
-		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
+		manhdst = manheten_dist(map->max_y, target_bottom(map, map->enemy), *x, *y);
 	}
 	return (false);
 }
@@ -240,13 +240,13 @@ bool	right_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ft_dprintf(fd_test, "Target --> RIGHT WALL\n");
 		return (false);
 	}
-	if (mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y) <= manhdst)
+	if (manheten_dist(map->max_x, target_rw(map, map->enemy), *x, *y) <= manhdst)
 	{
 		ft_dprintf(fd_test, "Coord to check y%d x%d mnht %d\n",
 		*y - y_cut_top, *x - x_cut_left - 4, manhdst);
 		pre_x = *x;
 		pre_y = *y;
-		manhdst = mnhtn_rw(map->max_x, target_rw(map, map->enemy), *x, *y);
+		manhdst = manheten_dist(map->max_x, target_rw(map, map->enemy), *x, *y);
 	}
 	return (false);
 }
@@ -255,15 +255,15 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 {
 	int static		pre_x;
 	int static		pre_y;
-	int static		manhdst;
+	int static		manh_dst;
 
 	if (reset == 0)
-		reset_values(&pre_x, &pre_y, &manhdst);
+		reset_values(&pre_x, &pre_y, &manh_dst);
 	if (game->stop_checking)
 	{
 		*x = pre_x;
 		*y = pre_y;
-		reset_values(&pre_x, &pre_y, &manhdst);
+		reset_values(&pre_x, &pre_y, &manh_dst);
 		if (map->max_y <= game->fig_max_y + *y)
 		{
 			game->hit_bottom = true;
@@ -273,11 +273,11 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ft_dprintf(fd_test, "Target --> BOTTOM\n");
 		return (false);
 	}
-	if (mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manhdst)
+	if (manheten_dist(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manh_dst)
 	{
 		pre_x = *x;
 		pre_y = *y;
-		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
+		manh_dst = manheten_dist(map->max_y, target_bottom(map, map->enemy), *x, *y);
 	}
 	return (false);
 }
