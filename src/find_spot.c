@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/02 15:38:32 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 19:37:12 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,45 +63,45 @@ bool	print_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
 ** a figure
 */
 
-bool	check_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
+bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 {
 	int		fig_x;
 	int		fig_y;
 	int		map_coord_x;
-	bool	cover;
+	bool	cover = 0;
 	int		print_figure = 0;
 
 	fig_x = 0;
 	fig_y = 0;
 	cover = 0;
-	map_coord_x = map_x;
-	// (PRINT && map_y == (15 + cut_y_top(fig))  && map_x == (25 + cut_x_left(fig) + 4))
+	map_coord_x = x;
+	// (PRINT && y == (15 + cut_y_top(fig))  && x == (25 + cut_x_left(fig) + 4))
 	// ? (print_figure = 2) : 0;
 	while (figure[fig_y])
 	{
 		while (figure[fig_y][fig_x])
 		{
-			if (map->map[map_y][map_x] != '.' && figure[fig_y][fig_x] == '*')
+			if (map->map[y][x] != '.' && figure[fig_y][fig_x] == '*')
 			{
 				if (cover)
 					return (false);
-				else if (map->map[map_y][map_x] == 'O')
+				else if (map->map[y][x] == 'O')
 					cover = true;
 			}
 			if (print_figure == 2 && figure[fig_y][fig_x] == '*')
 			{
-				if (map->map[map_y][map_x] == '.')
-					map->map[map_y][map_x] = '*';
+				if (map->map[y][x] == '.')
+					map->map[y][x] = '*';
 				else
-					map->map[map_y][map_x] = '$';
+					map->map[y][x] = '$';
 			}
-			map_x++;
+			x++;
 			fig_x++;
 		}
 		fig_x = 0;
-		map_x = map_coord_x;
+		x = map_coord_x;
 		fig_y++;
-		map_y++;
+		y++;
 	}
 	return (cover);
 }
@@ -188,8 +188,8 @@ void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 		(game->hit_top || game->hit_bottom))
 		find_spots(map, figure, game, &fill_map);
 	else
-	{
-		figure_view(figure, game);
 		find_spots(map, figure, game, &surround_enemy);
-	}
+	
+	ft_dprintf(fd_test, "r%dl%dt%db%d ",
+	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
 }

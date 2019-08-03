@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/02 15:37:11 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 18:44:16 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int		main()
 	}
 	init_player(&map);
 	init_map_size(&map);
-
+	ft_bzero((void *)&game, sizeof(game));
 	game.target_hit = ft_strdup("Surround game! right wall");
 	ft_bzero((void *)&game, sizeof(game));
 	game.target = NULL;

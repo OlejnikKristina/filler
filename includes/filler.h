@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 12:30:58 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/03 13:21:37 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@
 # include <stdbool.h>
 # include <errno.h>
 # define PRINT false
+# define ENEMY_FROM_RIGHT map->max_x / 2 <= game->square.x
+# define ENEMY_FROM_BOTTOM map->max_y / 2 <= game->square.y
 
 int					fd_test;
 int					y_cut_top;
@@ -77,6 +79,7 @@ typedef struct		s_game
 	t_coord			my;
 	char			*target_hit;
 	char			figure_view;
+
 	int				fig_max_x;
 	int				fig_max_y;
 
@@ -99,7 +102,7 @@ void				solver(t_map *map, t_game *game, t_figure *figure);
 void				closest_enemy_pos(t_game *game, t_map *map);
 bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
 
-void				figure_view(t_figure *figure, t_game *game);
+char				figure_view(t_game *game);
 bool				read_map(t_map *map);
 void				add_spot(t_spot **spot_top, int y, int x);
 
@@ -144,31 +147,32 @@ void				map_print(t_map *map);
 
 #endif
 
-
-
-int		target_top_x(t_map *map, char enemy_chr, bool enemy_from_right)
-{
-	short		x;
-	short		y;
-	short		my_topest_open_spot;
-
-	y = 0;
-	x = map->max_x;
-	while (4 <= x)
-	{
-		while (y < map->max_y)
-		{
-			if (map->map[y][x] == map->player)
-			{
-				ft_dprintf(fd_test, "topest open right spot y%d x%d\n", y, x);
-				return (x - 2);
-			}
-			if (map->map[y][x] == enemy_chr)
-				break ;
-			y++;
-		}
-		x--;
-		y = 0;
-	}
-	return (x - 2);
-}
+// bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
+// {
+// 	if ((game->figure_view == 'h' && !game->hit_right) || (game->hit_bottom && game->hit_top))
+// 	{
+// 	//	if (map->max_x / 2 <= game->square.x)
+// 			if (right_wall(game, map, y, x, game->reset))
+// 				return (true);
+// 	// 		left_wall(game, map, y, x);
+// 	}
+// 	else if (game->figure_view == 'v' || game->hit_right)
+// 	{
+// 		if (map->max_y / 2 <= game->square.y)
+// 		{
+// 			if (bottom(game, map, y, x, game->reset))
+// 				return (true);
+// 		}
+// 		else
+// 		{
+// 			if (top(game, map, y, x, game->reset))
+// 				return (true);
+// 		}
+// 	}
+// 	if (game->stop_checking)
+// 		game->reset = 0;
+// 	else
+// 		game->reset = 1;
+// 	game->stop_checking = false;
+// 	return (false);
+// }

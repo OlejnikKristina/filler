@@ -14,18 +14,17 @@
 
 void	reset_values(int *pre_x, int *pre_y, int *manhdst)
 {
-	ft_dprintf(fd_test, "First coordinat\n");
 	*pre_x = 0;
 	*pre_y = 0;
 	*manhdst = 1000;
 }
 
-void	figure_view(t_figure *figure, t_game *game)
+char	figure_view(t_game *game)
 {
-	if (figure->cut_y <= ft_strlen(figure->cut_fig[0]) - 1)
-		game->figure_view = 'h';
+	if (game->fig_max_y < game->fig_max_x)
+		return ('h');
 	else
-		game->figure_view = 'v';
+		return ('v');
 }
 
 // from vm spot				<got (O): [y0, x-5]
@@ -176,7 +175,6 @@ bool	top(t_game *game, t_map *map, int *y, int *x, bool reset)
 		pre_y = *y;
 		manhdst = mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y);
 	}
-	ft_dprintf(fd_test, "TOP\n");
 	return (false);
 }
 
@@ -221,11 +219,11 @@ bool	right_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 	int static		pre_y;
 	int static		manhdst;
 
-	if (enemy_ran_top(game, map))
-	{
-		game->hit_right = true;
-		game->hit_top = false;
-	}
+	// if (enemy_ran_top(game, map))
+	// {
+	// 	game->hit_right = true;
+	// 	game->hit_top = false;
+	// }
 	if (reset == 0)
 		reset_values(&pre_x, &pre_y, &manhdst);
 	if (game->stop_checking)
@@ -265,16 +263,14 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 	{
 		*x = pre_x;
 		*y = pre_y;
-		pre_x = 0;
-		pre_y = 0;
-		manhdst = 1000;
+		reset_values(&pre_x, &pre_y, &manhdst);
 		if (map->max_y <= game->fig_max_y + *y)
 		{
 			game->hit_bottom = true;
 			ft_dprintf(fd_test, "Hit target --> BOTTOM\n");
 			return (true);
 		}
-		ft_dprintf(fd_test, "Target --> BOTTOM Final ManhDst: %d\n", manhdst);
+		ft_dprintf(fd_test, "Target --> BOTTOM\n");
 		return (false);
 	}
 	if (mnhtn_rw(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manhdst)
@@ -288,30 +284,40 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 
 bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
 {
-	if ((game->figure_view == 'h' && !game->hit_right) || (game->hit_bottom && game->hit_top))
-	{
-	//	if (map->max_x / 2 <= game->square.x)
-			if (right_wall(game, map, y, x, game->reset))
-				return (true);
-	// 		left_wall(game, map, y, x);
-	}
-	else if (game->figure_view == 'v' || game->hit_right)
-	{
-		if (map->max_y / 2 <= game->square.y)
+//				1				0						0				1
+	// if ((!game->hit_right || !game->hit_left) && (!game->hit_top || !game->hit_bottom))
+	// {
+		if ((figure_view(game) == 'h' && !game->hit_right && !game->hit_left) ||
+			(game->hit_top || game->hit_bottom))
 		{
-			if (bottom(game, map, y, x, game->reset))
-				return (true);
+			// if (ENEMY_FROM_RIGHT)
+			// {
+				if (right_wall(game, map, y, x, game->reset))
+					return (true);
+			// }
+			// else
+			// 	if (left_wall(game, map, y, x, game->reset))
+			// 		return (true);
 		}
 		else
 		{
-			if (top(game, map, y, x, game->reset))
-				return (true);
+			if (ENEMY_FROM_BOTTOM)
+			{
+				if (bottom(game, map, y, x, game->reset))
+					return (true);
+			}
+			else
+			{
+				if (top(game, map, y, x, game->reset))
+					return (true);
+			}
 		}
-	}
-	if (game->stop_checking)
-		game->reset = 0;
-	else
-		game->reset = 1;
+//	}
+	game->reset = (game->stop_checking) ? 0 : 1;
+	// if (game->stop_checking)
+	// 	game->reset = 0;
+	// else
+	// 	game->reset = 1;
 	game->stop_checking = false;
 	return (false);
 }
