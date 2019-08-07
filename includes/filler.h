@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 22:29:29 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/04 12:00:25 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,9 +102,20 @@ typedef struct		s_game
 void				solver(t_map *map, t_game *game, t_figure *figure);
 void				closest_enemy_pos(t_game *game, t_map *map);
 bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
+bool				top(t_game *game, t_map *map, int *y, int *x, bool reset);
+bool				bottom(t_game *game, t_map *map, int *y, int *x, bool reset);
+bool				left_wall(t_game *game, t_map *map, int *y, int *x, bool reset);
+bool				right_wall(t_game *game, t_map *map, int *y, int *x, bool reset);
+
+int					target_rw(t_map *map, char enemy_chr);//right-left wall
+int					target_bottom(t_map *map, char game_chr);//top-bottom
+
 bool				b(t_game *game, t_map *map, int *y, int *x);
 bool				block_enemy(t_game *game, t_map *map, int *y, int *x, bool reset);
 int					manheten_dist(int i, int j, int x, int y);
+
+char				figure_view(t_game *game);
+void				reset_values(int *pre_x, int *pre_y, int *manh_dst);
 
 void				reset_values(int *pre_x, int *pre_y, int *manh_dst);
 char				figure_view(t_game *game);
@@ -152,33 +163,3 @@ void				map_print(t_map *map);
 #define TEST_MAP "/Users/krioliin/Desktop/second_filler/filler_krioliin/src/test_map.txt"
 
 #endif
-
-// bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
-// {
-// 	if ((game->figure_view == 'h' && !game->hit_right) || (game->hit_bottom && game->hit_top))
-// 	{
-// 	//	if (map->max_x / 2 <= game->square.x)
-// 			if (right_wall(game, map, y, x, game->reset))
-// 				return (true);
-// 	// 		left_wall(game, map, y, x);
-// 	}
-// 	else if (game->figure_view == 'v' || game->hit_right)
-// 	{
-// 		if (map->max_y / 2 <= game->square.y)
-// 		{
-// 			if (bottom(game, map, y, x, game->reset))
-// 				return (true);
-// 		}
-// 		else
-// 		{
-// 			if (top(game, map, y, x, game->reset))
-// 				return (true);
-// 		}
-// 	}
-// 	if (game->stop_checking)
-// 		game->reset = 0;
-// 	else
-// 		game->reset = 1;
-// 	game->stop_checking = false;
-// 	return (false);
-// }

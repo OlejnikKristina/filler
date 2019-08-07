@@ -1,0 +1,117 @@
+body
+{
+	background-color: #F7DAC3;
+	width: 98%;
+	height: 98%;
+}
+
+#grid
+{
+	background-color: #F39B94;
+	margin: auto;
+	min-width: 770px;
+	max-width: 770px;
+	min-height: 600px;
+	max-height: 600px;
+}
+
+#map_src
+{
+	width: 300px;
+	height: 100px;
+}
+
+#map_src_form
+{
+	display: flex;
+	flex-direction: column;
+	margin: 10vh 30vw;
+}
+
+input[name=choose_speed]
+{
+	display: inline;
+}
+
+#map_src_form div
+{
+	display: inline-block;
+}
+
+#button
+{
+	width: 150px;
+	min-height: 100px;
+}
+
+.md_map
+{
+	padding: 15px;
+	margin: 0;
+	display: grid;
+	grid-template-columns: repeat(40, 1fr);
+	grid-gap: 3px;
+}
+
+.spot_div
+{
+	margin: 0;
+	background-color: #FEEBD6;
+
+	max-width: 2.3vw;
+	max-height: 4vh;
+
+	transition: all 1s;
+	-webkit-transition: all 1s;
+	-webkit-transition-timing: ease-in-out;
+}
+
+/* .spot_div:hover
+{
+	 transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	rgb(99, 177, 118)
+	#8ac6d1
+} */
+
+.player_one
+{
+	background-color: #8ac6d1;
+}
+
+.player_o
+{
+	background-color: #96F0AC;;
+}
+
+.new_figure_o
+{
+	background-color: rgb(105, 189, 126);
+}
+
+.new_figure_x
+{
+	background-color: #4eb1c2;
+}
+
+.numbers
+{
+	background-color: #CACBB3;
+	grid-column-start: 1;
+	grid-column-end: 41;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	justify-content: space-around;
+	max-height: 45px;
+}
+
+.number
+{
+	padding: 10px 2px;
+	padding-top: 15px;
+	border-left: #466970 1px;
+	margin: 0;
+	display: inline-block;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel = "stylesheet" href = "style.css">
+	<script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type = "text/javascript" src = "scripts.js"></script>
+<title>Krioliin vizualizer</title>
+</head>
+<body>
+<div class = "wrapper">
+	<div class="battel_filed">
+		<p id = "paragraph">Hello world!</p>
+		<div id = "grid" class="md_map"></div>
+		<form id = "map_src_form" class = "map_src_form">
+			<textarea id = "map_src" rows = "40" columns = "200"></textArea>
+			<p>Choose speed</p>
+			<div>
+				<input type="radio" name="choose_speed" value="speed_slow">Slow</input>
+				<input type="radio" name="choose_speed" value="speed_middle">Middle</input>
+				<input type="radio" name="choose_speed" value="speed_fast">Fast</input>
+				<input type="radio" name="choose_speed" value="speed_super_fast">Super fast</input>
+			</div>
+			<input id ="button" type="button" value="Start game"/>
+		</form>
+	</div>
+</div>
+</body>
+</html>

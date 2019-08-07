@@ -26,7 +26,7 @@ void	last_enemy_activity(t_map *map, int target[2])
 			if (map->map[y][x] == map->enemy &&
 				(map->map[y][x] != map->old_map[y][x]))
 			{
-				target[0] = x;
+				target[0] = x - 4 - x_cut_left;
 				target[1] = y;
 				return ;
 			}
@@ -66,6 +66,7 @@ bool	block_enemy(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ex_y = *y;
 		manh_dst = manheten_dist(target[0], target[1], *x, *y);
 	}
+
 	ft_dprintf(fd_test, "Coord y %d x %d ",
 	*y - y_cut_top, *x - x_cut_left - 4);
 
@@ -79,5 +80,5 @@ bool	b(t_game *game, t_map *map, int *y, int *x)
 	bool return_value;
 	return_value =  block_enemy(game, map, x, y, game->reset);
 	game->reset = (game->stop_checking) ? 0 : 1;
-	return (false);
+	return (return_value);
 }

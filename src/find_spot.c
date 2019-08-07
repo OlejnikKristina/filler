@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 22:30:00 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/04 10:00:44 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,8 +106,8 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 
 bool	go_to_game(t_game *game, t_map *map, int *y, int *x)
 {
-	int static pre_x = 0;
-	int static pre_y = 0;
+	int static pre_x;
+	int static pre_y;
 
 	if (game->stop_checking)
 	{
@@ -123,10 +123,7 @@ bool	go_to_game(t_game *game, t_map *map, int *y, int *x)
 		}
 	}
 	if (game->square.x - 12 <= *x && game->square.y - 5 <= *y)
-	{
-		game->target = ft_strdup("Surround game!");
 		return (true);
-	}
 	return (false);
 }
 
@@ -173,6 +170,7 @@ void	find_spots(t_map *map, t_figure *figure,
 	game->stop_checking = true;
 	algorithm(game, map, &y, &x);
 	ft_printf("%d %d\n", y - cut_y_top(figure), x - cut_x_left(figure) - 4);
+
 	ft_dprintf(fd_test, "spot 2(y %d; x %d)\n",
 	y - cut_y_top(figure), 
 	x - cut_x_left(figure) - 4);
@@ -182,7 +180,7 @@ void	find_spots(t_map *map, t_figure *figure,
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
 	game->stop_checking = false;
-	/*
+
 	if ((game->hit_right || game->hit_left) &&
 		(game->hit_top || game->hit_bottom))
 		find_spots(map, figure, game, &fill_map);
@@ -190,7 +188,7 @@ void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 		find_spots(map, figure, game, &surround_enemy);
 	
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
-	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);*/
-	game->reset = 0;
-	find_spots(map, figure, game, &b);
+	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
+	// game->reset = 0;
+	// find_spots(map, figure, game, &b);
 }
