@@ -12,6 +12,12 @@
 
 #include "../includes/filler.h"
 
+/*
+	lea		Y[2]X[15]
+	vm 		Y[-1]X[13]
+	mine	Y[]X[]
+*/
+
 void	last_enemy_activity(t_map *map, int target[2])
 {
 	int		y;
@@ -35,8 +41,6 @@ void	last_enemy_activity(t_map *map, int target[2])
 		x = 0;
 		y++;
 	}
-//	target[0] = 4242;
-//	target[1] = 4242;
 }
 
 bool	block_enemy(t_game *game, t_map *map, int *y, int *x, bool reset)
@@ -60,7 +64,7 @@ bool	block_enemy(t_game *game, t_map *map, int *y, int *x, bool reset)
 	if (!map->old_map)
 		return (true);
 	last_enemy_activity(map, target);
-	if (manheten_dist(target[0], target[1], *x, *y) <= manh_dst)
+	if (manheten_dist(target[0], target[1], *x, *y) >= manh_dst)
 	{
 		ex_x = *x;
 		ex_y = *y;

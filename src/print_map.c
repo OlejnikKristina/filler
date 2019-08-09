@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 20:22:35 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/08 20:24:07 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	map_print(t_map *map)
 	unsigned	y;
 	unsigned	x;
 
-	y = 1;
+	y = 0;
 	printf("Map size y %d x %d\n", map->max_y, map->max_x);
 	printf("\033[1;34m    0123456789012345678901234567890123456789\033[0;0m\n");
 	while (y < map->max_y)

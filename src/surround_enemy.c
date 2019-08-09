@@ -47,6 +47,8 @@ int		manheten_dist(int i, int j, int x, int y)
 	int 		first_mod;
 	int 		second_mod;
 
+	if (i == -1)
+		return (-1);
 	first_mod = i - x;
 	if (first_mod < 0)
 		first_mod *= -1;
