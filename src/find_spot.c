@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/08 21:44:07 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 18:11:36 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -176,19 +176,25 @@ void	find_spots(t_map *map, t_figure *figure,
 	x - cut_x_left(figure) - 4);
 }
 
-
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
-	game->stop_checking = false;
+	t_coord		prior_spots[500];
+	bool		spot_found;
 
+	spot_found = 0;
+	ft_bzero(&prior_spots, sizeof(prior_spots) * 500);
+	game->stop_checking = false;
+	if (check_priority_spots(map, prior_spots))
+	{
+		if (choose_prior_spt(map, figure, game, prior_spots))
+			spot_found = 1;
+	}
 	if ((game->hit_right || game->hit_left) &&
-		(game->hit_top || game->hit_bottom))
+		(game->hit_top || game->hit_bottom) && !spot_found)
 		find_spots(map, figure, game, &fill_map);
 	else
 		find_spots(map, figure, game, &surround_enemy);
 	
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
 	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
-	// game->reset = 0;
-	// find_spots(map, figure, game, &b);
 }

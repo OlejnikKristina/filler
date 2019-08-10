@@ -60,9 +60,7 @@ int		manheten_dist(int i, int j, int x, int y)
 
 bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
 {
-//				1				0						0				1
-	// if ((!game->hit_right || !game->hit_left) && (!game->hit_top || !game->hit_bottom))
-	// {
+
 		if ((figure_view(game) == 'h' && !game->hit_right && !game->hit_left) ||
 			(game->hit_top || game->hit_bottom))
 		{

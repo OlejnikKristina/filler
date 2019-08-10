@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/03/21 20:21:31 by krioliin       #+#    #+#                */
-/*   Updated: 2019/04/01 19:18:35 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 16:30:05 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n)
 	s2 = (unsigned char *)str2;
 	if (n == 0)
 		return (0);
-	while (*s1 == *s2 && n != 1 && *s1 && *s2)
+	while (*s1 == *s2 && n != 1)
 	{
 		s1++;
 		s2++;

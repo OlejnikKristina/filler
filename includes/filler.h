@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/09 17:51:02 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 18:11:58 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define PRINT false
 # define ENEMY_FROM_RIGHT map->max_x / 2 <= game->square.x
 # define ENEMY_FROM_BOTTOM map->max_y / 2 <= game->square.y
+# define CLOSE_TO_LEFT_RIGHT (map->max_x * 10 / 100)
 
 int					fd_test;
 int					y_cut_top;
@@ -101,6 +102,13 @@ typedef struct		s_game
 
 void				solver(t_map *map, t_game *game, t_figure *figure);
 void				closest_enemy_pos(t_game *game, t_map *map);
+
+bool				check_priority_spots(t_map *map, t_spot *priority_spots[500]);
+
+bool				choose_prior_spt(t_map *map, t_figure *figure,
+					t_game *game, t_coord *prior_spots[500]);
+
+
 bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
 bool				top(t_game *game, t_map *map, int *y, int *x, bool reset);
 bool				bottom(t_game *game, t_map *map, int *y, int *x, bool reset);

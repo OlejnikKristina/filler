@@ -165,12 +165,12 @@ input[name=choose_speed]
 .player_x
 {
 	background-color: #8ac6d1;
-	/* background-image: url(rabbit.svg); */
+	background-image: url(rabbit.svg);
 }
 
 .player_o
 {
-	/* background: url(excited.svg) no-repeat; */
+	background: url(excited.svg) no-repeat;
 	background-color: #96F0AC;
 }
 
