@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:35 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/09 17:40:47 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 19:39:18 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,21 +47,35 @@ bool			enemy_ran_top(t_game *game, t_map *map)
 	return (false);
 }
 
-int				target_rw(t_map *map, char enemy_chr)
+int				target_rw(t_map *map, t_game *game, char enemy_chr)
 {
 	int		y;
 
-	y = 0;
-	while (y < map->max_y)
+	if (game->hit_top == true)
 	{
-		if (ft_strchr(map->map[y], enemy_chr))
+		y = map->max_y - 1;
+		while (0 <= y)
 		{
-			(y != 0) ? y-- : 1;
-			(y != 0) ? y-- : 1;
-			return (y);
+			if (ft_strchr(map->map[y], enemy_chr))
+			{
+				(y != 0) ? y++ : 1;
+				(y != 0) ? y++ : 1;
+				return (y);
+			}
+			y--;
 		}
-		y++;
 	}
+		y = 0;
+		while (y < map->max_y)
+		{
+			if (ft_strchr(map->map[y], enemy_chr))
+			{
+				(y != 0) ? y-- : 1;
+				(y != 0) ? y-- : 1;
+				return (y);
+			}
+			y++;
+		}
 	return (y);
 }
 
@@ -91,13 +105,13 @@ bool			right_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ft_dprintf(fd_test, "Target --> RIGHT WALL\n");
 		return (false);
 	}
-	if (manheten_dist(map->max_x, target_rw(map, map->enemy), *x, *y) <= manh_dst)
+	if (manheten_dist(map->max_x, target_rw(map, game, map->enemy), *x, *y) <= manh_dst)
 	{
 		ft_dprintf(fd_test, "Coord to check y%d x%d mnht %d\n",
 		*y - y_cut_top, *x - x_cut_left - 4, manh_dst);
 		pre_x = *x;
 		pre_y = *y;
-		manh_dst = manheten_dist(map->max_x, target_rw(map, map->enemy), *x, *y);
+		manh_dst = manheten_dist(map->max_x, target_rw(map, game, map->enemy), *x, *y);
 	}
 	return (false);
 }

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:27 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/09 17:41:21 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 19:25:29 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,11 +33,11 @@ bool	left_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 		ft_dprintf(fd_test, "Target --> LEFT WALL\n");
 		return (false);
 	}
-	if (manheten_dist(4, target_rw(map, map->enemy), *x, *y) <= manh_dst)
+	if (manheten_dist(4, target_rw(map, game, map->enemy), *x, *y) <= manh_dst)
 	{
 		pre_x = *x;
 		pre_y = *y;
-		manh_dst = manheten_dist(map->max_x, target_rw(map, map->enemy), *x, *y);
+		manh_dst = manheten_dist(map->max_x, target_rw(map, game, map->enemy), *x, *y);
 	}
 	return (false);
 }

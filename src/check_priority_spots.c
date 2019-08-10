@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 18:11:47 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 18:31:30 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ bool	is_enemy_close(t_map *map, short map_edge[2], short y, short x)
 }
 
 
-bool	left_priority_spots(t_map *map, short map_edge[2],
-		t_spot *priority_spots[500], short *num)
+void	left_priority_spots(t_map *map, short map_edge[2],
+		t_coord *priority_spots[500], short *num)
 {
 	short	y;
 	short	x;
@@ -78,7 +78,7 @@ bool	left_priority_spots(t_map *map, short map_edge[2],
 	}
 }
 
-bool	chose_prior_spots(t_coord *spots[500], int y, int x)
+bool	select_prior_spots(t_coord *spots[500], int y, int x)
 {
 	short	i;
 
@@ -92,7 +92,7 @@ bool	chose_prior_spots(t_coord *spots[500], int y, int x)
 	return (false);
 }
 
-bool	choose_prior_spt(t_map *map, t_figure *figure,
+bool	find_prior_spt(t_map *map, t_figure *figure,
 		t_game *game, t_coord *prior_spots[500])
 {
 	int		y;
@@ -108,9 +108,9 @@ bool	choose_prior_spt(t_map *map, t_figure *figure,
 	{
 		while (x < map->max_x + 4)
 		{
-			if (chose_prior_spots(prior_spots, y, x))
+			if (check_spot(figure->cut_fig, map, y, x, figure))
 			{
-				if (algorithm(game, map, &y, &x))
+				if (select_prior_spots(prior_spots, y, x))
 				{
 					ft_printf("%d %d\n", y - cut_y_top(figure),
 					 x - cut_x_left(figure) - 4);
@@ -134,7 +134,7 @@ bool	choose_prior_spt(t_map *map, t_figure *figure,
 	map_edge[1] 10% from vertical map size;
 */
 
-bool	check_priority_spots(t_map *map, t_spot *priority_spots[500])
+bool	check_priority_spots(t_map *map, t_coord *priority_spots[500])
 {
 	short		map_edge[2];
 	short		prior_spt_num;

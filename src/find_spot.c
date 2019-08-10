@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 18:11:36 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 18:33:31 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,19 +178,19 @@ void	find_spots(t_map *map, t_figure *figure,
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
-	t_coord		prior_spots[500];
-	bool		spot_found;
+	// t_coord		*prior_spots[500];
+	// bool		spot_found;
 
-	spot_found = 0;
-	ft_bzero(&prior_spots, sizeof(prior_spots) * 500);
+	// spot_found = 0;
+	// ft_bzero(&prior_spots, sizeof(prior_spots) * 500);
 	game->stop_checking = false;
-	if (check_priority_spots(map, prior_spots))
-	{
-		if (choose_prior_spt(map, figure, game, prior_spots))
-			spot_found = 1;
-	}
+	// if (check_priority_spots(map, prior_spots))
+	// {
+	// 	if (find_prior_spt(map, figure, game, prior_spots))
+	// 		spot_found = 1;
+	// }
 	if ((game->hit_right || game->hit_left) &&
-		(game->hit_top || game->hit_bottom) && !spot_found)
+		(game->hit_top || game->hit_bottom)) //&& !spot_found)
 		find_spots(map, figure, game, &fill_map);
 	else
 		find_spots(map, figure, game, &surround_enemy);
