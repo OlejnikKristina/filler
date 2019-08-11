@@ -21,15 +21,8 @@ void	reset_values(int *pre_x, int *pre_y, int *manh_dst)
 
 char	figure_view(t_game *game)
 {
-	if (game->fig_max_y < game->fig_max_x)
-		return ('h');
-	else
-		return ('v');
+	return ((game->fig_max_y < game->fig_max_x) ? 'h' : 'v');
 }
-
-// from vm spot				<got (O): [y0, x-5]
-// from test map spot		y13;x21;
-// mine choosen best spot	y15;x18
 
 /*
 ** Creat a strcut with info where your player 
@@ -86,8 +79,6 @@ bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
 					return (true);
 			}
 		}
-//	}
 	game->reset = (game->stop_checking) ? 0 : 1;
-	game->stop_checking = false;
 	return (false);
 }

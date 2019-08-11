@@ -6,7 +6,7 @@
 #    By: krioliin <krioliin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/30 16:51:39 by krioliin       #+#    #+#                 #
-#    Updated: 2019/08/10 22:57:16 by krioliin      ########   odam.nl          #
+#    Updated: 2019/08/11 19:02:57 by krioliin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,9 @@ INCLUDES		=	../includes/filler.h \
 
 FILES			=	main.c read_map.c find_spot.c \
 					read_figure.c cut_figure.c clean_data.c \
-					print_map.c closest_enemy_pos.c solver.c \
-					max_xy_field.c add_node.c surround_enemy.c \
-					block_enemy.c save_old_map.c attack_top.c \
-					attack_bottom.c attack_right_wall.c \
-					attack_left_wall.c
+					closest_to_enemy_pos.c surround_enemy.c \
+					attack_top.c attack_bottom.c \
+					attack_right.c attack_left.c
 all: $(NAME)
 
 $(NAME):

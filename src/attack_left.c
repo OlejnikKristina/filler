@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   attack_left_wall.c                                 :+:    :+:            */
+/*   attack_left.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:27 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 23:42:04 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 20:42:44 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
+
+bool	left_wall_hit(t_map *map)
+{
+	int		i;
+
+	i = 0;
+	while (i < map->max_y)
+	{
+		if (map->map[i][4] == map->player)
+			return (true);
+		i++;
+	}
+	return (false);
+}
 
 bool	left_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 {
@@ -24,7 +38,7 @@ bool	left_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 		*x = pre_x;
 		*y = pre_y;
 		reset_values(&pre_x, &pre_y, &manh_dst);
-		if (*x - game->fig_max_x - 4 <= 4)
+		if (left_wall_hit(map))
 		{
 			game->hit_left = true;
 			ft_dprintf(fd_test, "Hit --> LEFT WALL\n");

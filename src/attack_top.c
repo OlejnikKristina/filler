@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:15:00 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 16:17:29 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 19:54:32 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ bool	top(t_game *game, t_map *map, int *y, int *x, bool reset)
 		*x = pre_x;
 		*y = pre_y;
 		reset_values(&pre_x, &pre_y, &manhdst);
-		if (*y - y_cut_top < 0 || (*y == 0 && y_cut_top == 0))
+		if (ft_strchr(map->map[0], map->player) ||
+			!ft_strchr(map->map[0], '.'))
 		{
 			game->hit_top = true;
 			ft_dprintf(fd_test, "Hit target --> TOP\n");

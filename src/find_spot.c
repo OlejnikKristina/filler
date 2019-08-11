@@ -6,59 +6,31 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 16:36:08 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 20:02:19 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 
-bool	print_spot(char **figure, t_map *map, int map_y, int map_x, t_figure *fig)
+int		max_x_filed(t_map *map, char *figure)
 {
-	int		fig_x;
-	int		fig_y;
-	int		map_coord_x;
-	bool	cover;
-	int		print_figure = 2;
+	return (map->max_x - ft_strlen(figure));
+}
 
-	fig_x = 0;
-	fig_y = 0;
-	cover = 0;
-	map_coord_x = map_x;
-	while (figure[fig_y])
-	{
-		while (figure[fig_y][fig_x])
-		{
-			if (map->map[map_y][map_x] != '.' && figure[fig_y][fig_x] == '*')
-			{
-				if (cover)
-					return (false);
-				else if (map->map[map_y][map_x] == 'O')
-					cover = true;
-			}
-			if (print_figure == 2 && figure[fig_y][fig_x] == '*')
-			{
-				if (map->map[map_y][map_x] == '.')
-					map->map[map_y][map_x] = '*';
-				else
-					map->map[map_y][map_x] = '$';
-			}
-			map_x++;
-			fig_x++;
-		}
-		fig_x = 0;
-		map_x = map_coord_x;
-		fig_y++;
-		map_y++;
-	}
-	return (cover);
+short		max_y_filed(t_map *map, char **cut_figure)
+{
+	int		y;
+
+	y = 0;
+	while (cut_figure[y])
+		y++;
+	return (map->max_y - y);
 }
 
 /*
 ** {coord_x coord_y}
-** Coordinate on the map
-** which we are checking
-** for possibility to put
-** a figure
+** Coordinate on the map  which we are checking
+** for possibility to put a figure
 */
 
 bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
@@ -73,9 +45,9 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = x;
-	while (figure[fig_y])//24 + 4
+	while (figure[fig_y])
 	{
-		while (figure[fig_y][fig_x]) //&& (x < map->max_x - fig->cut_x + 5))
+		while (figure[fig_y][fig_x])
 		{
 			if (map->max_x + 5 - fig->cut_x < x)
 				return (false);
@@ -106,13 +78,6 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 	return (cover);
 }
 
-bool	fill_map(t_game *game, t_map *map, int *y, int *x)
-{
-	if (game || map || *x || *y)
-		return (true);
-	return (true);
-}
-
 void	find_spots(t_map *map, t_figure *figure,
 		t_game *game, bool (*algorithm)(t_game *, t_map *, int *, int *))
 {
@@ -123,8 +88,6 @@ void	find_spots(t_map *map, t_figure *figure,
 	y = 0;
 	x = 4;
 	max_y_field = max_y_filed(map, figure->cut_fig + 1);
-	y_cut_top = cut_y_top(figure);
-	x_cut_left = cut_x_left(figure);
 	while (y < max_y_field)
 	{
 		while (x < map->max_x + 4)
@@ -153,6 +116,7 @@ void	find_spots(t_map *map, t_figure *figure,
 	ft_dprintf(fd_test, "spot 2(y %d; x %d)\n",
 	y - cut_y_top(figure), 
 	x - cut_x_left(figure) - 4);
+	game->stop_checking = false;
 }
 
 bool	closest_enemy_spot(t_map *map, int coord[2], 
@@ -197,25 +161,22 @@ bool	closest_enemy_spot(t_map *map, int coord[2],
 	to my current coordinats
 */
 
-bool	closest_pos(t_game *game, t_map *map, int *y, int *x)
+bool	closest_to_enemy_pos(t_game *game, t_map *map, int *y, int *x)
 {
 	int static	best_coord[2];
 	int			coord[2];
 	int static	best_manh_dst;
 
-	if (game->stop_checking)
-	{
-		*y = best_coord[0];
-		*x = best_coord[1];
-		//best_manh_dst = 1000;
-		reset_values(&best_coord[1], &best_coord[0], &best_manh_dst);
-		// best_coord[0] = 0;
-		// best_coord[1] = 0;
-	}
 	if (best_manh_dst == 0)
 	{
 		best_manh_dst = 1000;
 		return (true);
+	}
+	if (game->stop_checking)
+	{
+		*y = best_coord[0];
+		*x = best_coord[1];
+		reset_values(&best_coord[1], &best_coord[0], &best_manh_dst);
 	}
 	(game->reset == 0) ?
 	reset_values(&best_coord[1], &best_coord[0], &best_manh_dst) : 1;
@@ -223,23 +184,23 @@ bool	closest_pos(t_game *game, t_map *map, int *y, int *x)
 	coord[1] = *x;
 	closest_enemy_spot(map, coord, best_coord, &best_manh_dst);
 	game->reset = (game->stop_checking) ? 0 : 1;
-	return (0);
+	return (false);
 }
 
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
 	game->stop_checking = false;
-	if (map->max_x <= 24)
+	if (map->max_y <= 24)
 	{
-		if (((game->hit_right && game->hit_left) &&
-		(game->hit_top || game->hit_bottom)))
-			find_spots(map, figure, game, &closest_pos);
+		if (((game->hit_right || game->hit_left) &&
+			(game->hit_top || game->hit_bottom)))
+			find_spots(map, figure, game, &closest_to_enemy_pos);
 		else
 			find_spots(map, figure, game, &surround_enemy);
 	}
 	else
-		find_spots(map, figure, game, &closest_pos);
+		find_spots(map, figure, game, &closest_to_enemy_pos);
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
 	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
 }

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/09 17:27:56 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 19:42:02 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,40 +45,20 @@ int		main()
 	t_map		map;
 	t_figure	figure;
 	t_game		game;
-	int			i;
 
-	i = 0;
-	fd_test = open(TEST_FILE, O_RDWR);
-	if (PRINT)
-	{
-		close(0);
-		open(TEST_MAP, O_RDONLY);
-	}
 	init_player(&map);
 	init_map_size(&map);
 	ft_bzero((void *)&game, sizeof(game));
-	map.old_map = NULL;
+	fd_test = open(TEST_FILE, O_RDWR);
 	while (1)
 	{
-		ft_dprintf(fd_test, "\n\n***** Run loop %d time ****\n", i + 1);
 		if (read_map(&map) == false)
-		{
-			ft_dprintf(fd_test, "Can not read from stdin\n");
 			return (0);
-		}
-		read_figure(&figure);
-		closest_enemy_pos(&game, &map);
-
+		read_figure(&figure, &game);
 		game.fig_max_x = ft_strlen(figure.cut_fig[0]);
 		game.fig_max_y = figure.cut_y;
 		find_possible_spot(&map, &figure, &game);
-
-		(PRINT) ? map_print(&map) : 1;
-
-		(map.map) ? save_old_map(&map) : 1;
 		clean_data(&map, &figure, &game);
-		i++;
 	}
-	free_arr((void ***)&map.old_map, map.max_y);
 	return (0);
 }

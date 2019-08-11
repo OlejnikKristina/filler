@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/03 20:24:11 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 19:03:45 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,7 @@ void	cut_figure_del(t_figure *figure)
 	if (!figure->cut_fig)
 		return ;
 	while (y < figure->cut_y)
-	{
-		// if (figure->cut_fig[y])
-		// 	ft_strdel(&figure->cut_fig[y]);
 		y++;
-	}
-//	free(figure->cut_fig);
 	if (figure->cut_fig)
 		free_arr((void ***)&(figure->cut_fig), y);
 	figure->cut_fig = NULL;
@@ -71,12 +66,6 @@ void	field_del(char **str, int size)
 
 void	clean_data(t_map *map, t_figure *figure, t_game *game)
 {
-	// field_del(map->map, map->max_y);
-	// field_del(figure->field, figure->size_y);
-//	ft_bzero((void *)map, sizeof(map));
-//	ft_bzero((void *)figure, sizeof(figure));
-	if (map->map)
-		save_old_map(map);
 	free_arr((void ***)&(map->map), map->max_y);
 	free_arr((void ***)&(figure->field), figure->size_y);
 	cut_figure_del(figure);

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 22:58:06 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 18:57:03 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ short unsigned	cut_x_left(t_figure *figure)
 	return (cut_columns);
 }
 
-short unsigned cut_x_right(t_figure *figure)
+short unsigned	cut_x_right(t_figure *figure)
 {
 	short unsigned	cut_columns;
 	int				y;
@@ -70,7 +70,7 @@ short unsigned cut_x_right(t_figure *figure)
 	return (cut_columns);
 }
 
-int	cut_y_top(t_figure *figure)
+int				cut_y_top(t_figure *figure)
 {
 	short unsigned	cut_rows;
 	int				max_y;
@@ -118,7 +118,7 @@ short unsigned	cut_y_bottom(t_figure *figure)
 **
 */
 
-void	cut_figure(t_figure *figure)
+void			cut_figure(t_figure *figure)
 {
 	int		max_fig_x;
 	int		max_fig_y;
