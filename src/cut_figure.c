@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/21 15:04:23 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 22:58:06 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -131,11 +131,11 @@ void	cut_figure(t_figure *figure)
 	left_offset = cut_x_left(figure);
 	max_fig_y = figure->size_y - cut_y_top(figure) - cut_y_bottom(figure);
 	max_fig_x = figure->size_x - cut_x_left(figure) - cut_x_right(figure);
+	figure->cut_x = max_fig_x;
 	figure->cut_fig = (char **)malloc(sizeof(char *) * max_fig_y + 2);
 	while (y < figure->size_y - cut_y_bottom(figure))
 	{
 		figure->cut_fig[index] = ft_strsub(figure->field[y], left_offset, max_fig_x);
-	//	printf("\033[1;36m%s\033[0;0m\n", figure->cut_fig[index]);
 		index++;
 		y++;
 	}

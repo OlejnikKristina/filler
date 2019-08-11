@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:52 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/09 17:41:02 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 23:28:04 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 	{
 		*x = pre_x;
 		*y = pre_y;
-		reset_values(&pre_x, &pre_y, &manh_dst);
+		reset_values(&pre_x, &pre_y, &manh_dst);//24   21 + 3
 		if (map->max_y <= game->fig_max_y + *y)
 		{
 			game->hit_bottom = true;

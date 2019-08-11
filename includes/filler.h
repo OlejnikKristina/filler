@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 19:22:17 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 23:45:05 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 # include <stdbool.h>
 # include <errno.h>
 # define PRINT false
-# define ENEMY_FROM_RIGHT map->max_x / 2 <= game->square.x
+# define ENEMY_FROM_RIGHT (map->max_x / 2 <= game->square.x)
 # define ENEMY_FROM_BOTTOM map->max_y / 2 <= game->square.y
 # define CLOSE_TO_LEFT_RIGHT (map->max_x * 10 / 100)
 
@@ -48,6 +48,7 @@ typedef struct		s_figure
 	char			**field;
 	char			**cut_fig;
 	int				cut_y;
+	int				cut_x;
 	int				size_x;
 	int				size_y;
 }					t_figure;

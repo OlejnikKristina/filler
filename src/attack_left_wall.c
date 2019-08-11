@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:27 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 19:25:29 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 23:42:04 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ bool	left_wall(t_game *game, t_map *map, int *y, int *x, bool reset)
 		*x = pre_x;
 		*y = pre_y;
 		reset_values(&pre_x, &pre_y, &manh_dst);
-		if (*x <= 4)
+		if (*x - game->fig_max_x - 4 <= 4)
 		{
 			game->hit_left = true;
 			ft_dprintf(fd_test, "Hit --> LEFT WALL\n");

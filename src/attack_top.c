@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:15:00 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 19:31:36 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 23:53:38 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ bool	top(t_game *game, t_map *map, int *y, int *x, bool reset)
 		*x = pre_x;
 		*y = pre_y;
 		reset_values(&pre_x, &pre_y, &manht_dst);//If it will hit right wall
-		if (*y - y_cut_top < 0 || (*y == 0 && y_cut_top == 0)) //|| (map->max_x + 4 <= game->fig_max_x + (*x - 4)))
+		if (*y - y_cut_top < 0 || (*y - game->fig_max_x < 0)) //|| (map->max_x + 4 <= game->fig_max_x + (*x - 4)))
 		{
 			game->hit_top = true;
 			ft_dprintf(fd_test, "Hit target --> TOP\n");

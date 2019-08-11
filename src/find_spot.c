@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 22:50:13 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/10 23:55:10 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,10 +73,12 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 	fig_y = 0;
 	cover = 0;
 	map_coord_x = x;
-	while (figure[fig_y])
+	while (figure[fig_y])//24 + 4
 	{
-		while (figure[fig_y][fig_x])
+		while (figure[fig_y][fig_x]) //&& (x < map->max_x - fig->cut_x + 5))
 		{
+			if (map->max_x + 5 - fig->cut_x < x)
+				return (false);
 			if (map->map[y][x] != '.' && figure[fig_y][fig_x] == '*')
 			{
 				if (cover)
@@ -102,29 +104,6 @@ bool	check_spot(char **figure, t_map *map, int y, int x, t_figure *fig)
 		y++;
 	}
 	return (cover);
-}
-
-bool	go_to_game(t_game *game, t_map *map, int *y, int *x)
-{
-	int static pre_x;
-	int static pre_y;
-
-	if (game->stop_checking)
-	{
-		*x = pre_x;
-		*y = pre_y;
-	}
-	if (pre_x <= *x && pre_y <= *y)
-	{
-		if (*x <= game->square.x && *y <= game->square.y)
-		{
-			pre_x = *x;
-			pre_y = *y;
-		}
-	}
-	if (game->square.x - 12 <= *x && game->square.y - 5 <= *y)
-		return (true);
-	return (false);
 }
 
 bool	fill_map(t_game *game, t_map *map, int *y, int *x)
@@ -278,12 +257,13 @@ void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 	checks++;
 	game->stop_checking = false;
 
-	if (((game->hit_right || game->hit_left) &&
-		(game->hit_top || game->hit_bottom)) || 100 < checks) //&& !spot_found)
-		find_spots(map, figure, game, &closest_pos);
-		//find_spots(map, figure, game, &fill_map);
-	else
-		find_spots(map, figure, game, &surround_enemy);
+	find_spots(map, figure, game, &closest_pos);
+	// if (((game->hit_right && game->hit_left) &&
+	// 	(game->hit_top || game->hit_bottom))) //|| (300 < checks && checks < 600))
+	// 	find_spots(map, figure, game, &closest_pos);
+	// 	//find_spots(map, figure, game, &closest_pos);
+	// else
+	// 	find_spots(map, figure, game, &surround_enemy);
 	
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
 	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);

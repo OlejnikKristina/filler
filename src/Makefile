@@ -6,7 +6,7 @@
 #    By: krioliin <krioliin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/30 16:51:39 by krioliin       #+#    #+#                 #
-#    Updated: 2019/08/10 18:13:33 by krioliin      ########   odam.nl          #
+#    Updated: 2019/08/10 22:57:16 by krioliin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ FILES			=	main.c read_map.c find_spot.c \
 					max_xy_field.c add_node.c surround_enemy.c \
 					block_enemy.c save_old_map.c attack_top.c \
 					attack_bottom.c attack_right_wall.c \
-					attack_left_wall.c check_priority_spots.c
+					attack_left_wall.c
 all: $(NAME)
 
 $(NAME):
