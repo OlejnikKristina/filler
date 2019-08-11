@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 18:41:31 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 23:20:28 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,17 +91,16 @@ typedef struct		s_game
 /*
 ** ************************** Attack *********************************
 */
-bool				check_spot(char **figure, t_map *map, int y, int x, t_figure *fig);
-
+bool				check_spot(t_map *map, int y, int x, t_figure *fig);
 bool				surround_enemy(t_game *game, t_map *map, int *y, int *x);
 bool				closest_to_enemy_pos(t_game *game, t_map *map, int *y, int *x);
-bool				top(t_game *game, t_map *map, int *y, int *x, bool reset);
-bool				bottom(t_game *game, t_map *map, int *y, int *x, bool reset);
-bool				left_wall(t_game *game, t_map *map, int *y, int *x, bool reset);
-bool				right_wall(t_game *game, t_map *map, int *y, int *x, bool reset);
+bool				top(t_game *game, t_map *map, int *yx[2], bool reset);
+bool				bottom(t_game *game, t_map *map, int *yx[2], bool reset);
+bool				left_wall(t_game *game, t_map *map, int *yx[2], bool reset);
+bool				right_wall(t_game *game, t_map *map, int *yx[2], bool reset);
 
-int					target_rw(t_map *map, t_game *game, char enemy_chr);//right-left wall
-int					target_bottom(t_map *map, char game_chr);//top-bottom
+int					target_rw(t_map *map, t_game *game, char enemy_chr);
+int					target_bottom(t_map *map, char game_chr);
 
 int					manheten_dist(int i, int j, int x, int y);
 
@@ -129,15 +128,17 @@ void				find_possible_spot(t_map *map, t_figure *figure,
 ** ********************** Clean data ************************************
 */
 
-void				clean_data(t_map *map, t_figure *figure, t_game *game);
+void				clean_data(t_map *map, t_figure *figure);
 void				field_del(char **str, int size);
 void				map_del(t_map *map);
 
 /*
-** ********************** Test functions ********************************
+** ********************** Addtional functions ********************************
 */
 
-void				map_print(t_map *map);
+void				increment(int *increment_me, int *add_plus_one);
+short				max_y_filed(t_map *map, char **cut_figure);
+void				set_to_null(int	*set_me_null, int *and_me, bool *me_as_well);
 
 #define TEST_FILE "/Users/krioliin/Desktop/second_filler/filler_krioliin/src/test_file.txt"
 #define TEST_MAP "/Users/krioliin/Desktop/second_filler/filler_krioliin/src/test_map.txt"

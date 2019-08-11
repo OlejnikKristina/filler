@@ -1,54 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   clean_data.c                                       :+:    :+:            */
+/*   additional_funcs.c                                 :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 21:12:47 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 23:57:38 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 
-void	free_arr(void ***arr, int len)
+void	increment(int *increment_me, int *add_plus_one)
 {
-	int	i;
-
-	i = 0;
-	if (!**arr || !*arr || !arr)
-		return ;
-	while (i < len)
-	{
-		if ((*arr)[i])
-		{
-			free((*arr)[i]);
-			(*arr)[i] = NULL;
-		}
-		i++;
-	}
-	free(*arr);
-	*arr = NULL;
+	*increment_me += 1;
+	*add_plus_one += 1;
 }
 
-void	cut_figure_del(t_figure *figure)
+short		max_y_filed(t_map *map, char **cut_figure)
 {
 	int		y;
 
 	y = 0;
-	if (!figure->cut_fig)
-		return ;
-	while (y < figure->cut_y)
+	while (cut_figure[y])
 		y++;
-	if (figure->cut_fig)
-		free_arr((void ***)&(figure->cut_fig), y);
-	figure->cut_fig = NULL;
+	return (map->max_y - y);
 }
 
-void	clean_data(t_map *map, t_figure *figure)
+void	set_to_null(int	*set_me_null, int *and_me, bool *me_as_well)
 {
-	free_arr((void ***)&(map->map), map->max_y);
-	free_arr((void ***)&(figure->field), figure->size_y);
-	cut_figure_del(figure);
+	*set_me_null = 0;
+	*and_me = 0;
+	*me_as_well = 0;
 }

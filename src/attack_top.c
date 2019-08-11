@@ -6,17 +6,16 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:15:00 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 19:54:32 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 22:08:19 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
 
-int		target_top_x(t_map *map, char enemy_chr, bool enemy_from_right)
+int		target_top_x(t_map *map, char enemy_chr)
 {
 	short		x;
 	short		y;
-	short		my_topest_open_spot;
 
 	y = 0;
 	x = map->max_x;
@@ -25,10 +24,7 @@ int		target_top_x(t_map *map, char enemy_chr, bool enemy_from_right)
 		while (y < map->max_y)
 		{
 			if (map->map[y][x] == map->player)
-			{
-				ft_dprintf(fd_test, "topest open right spot y%d x%d\n", y, x);
 				return (x - 2);
-			}
 			if (map->map[y][x] == enemy_chr)
 				break ;
 			y++;
@@ -39,34 +35,32 @@ int		target_top_x(t_map *map, char enemy_chr, bool enemy_from_right)
 	return (x - 2);
 }
 
-bool	top(t_game *game, t_map *map, int *y, int *x, bool reset)
+bool	top(t_game *game, t_map *map, int **yx, bool reset)
 {
-	int static		pre_x = 0;
-	int static		pre_y = 0;
+	int static		pre_x;
+	int static		pre_y;
 	int static		manhdst;
 
 	if (reset == 0)
 		reset_values(&pre_x, &pre_y, &manhdst);
 	if (game->stop_checking)
 	{
-		*x = pre_x;
-		*y = pre_y;
+		*yx[0] = pre_y;
+		*yx[1] = pre_x;
 		reset_values(&pre_x, &pre_y, &manhdst);
 		if (ft_strchr(map->map[0], map->player) ||
 			!ft_strchr(map->map[0], '.'))
 		{
 			game->hit_top = true;
-			ft_dprintf(fd_test, "Hit target --> TOP\n");
 			return (true);
 		}
-		ft_dprintf(fd_test, "Target --> TOP Final ManhDst: %d\n", manhdst);
 		return (false);
 	}
-	if (manheten_dist(target_top_x(map, map->enemy, 1), 0, *x, *y) <= manhdst)
+	if (manheten_dist(target_top_x(map, map->enemy), 0, *yx[1], *yx[0]) <= manhdst)
 	{
-		pre_x = *x;
-		pre_y = *y;
-		manhdst = manheten_dist(target_top_x(map, map->enemy, 1), 0, *x, *y);
+		pre_y = *yx[0];
+		pre_x = *yx[1];
+		manhdst = manheten_dist(target_top_x(map, map->enemy), 0, *yx[1], *yx[0]);
 	}
 	return (false);
 }

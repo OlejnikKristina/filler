@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   surround_game.c                                   :+:    :+:            */
+/*   surround_enemy.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/02 15:19:09 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 23:58:08 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,8 @@ void	reset_values(int *pre_x, int *pre_y, int *manh_dst)
 	*manh_dst = 1000;
 }
 
-char	figure_view(t_game *game)
-{
-	return ((game->fig_max_y < game->fig_max_x) ? 'h' : 'v');
-}
-
 /*
-** Creat a strcut with info where your player 
+** Creat a strcut with info where your player
 ** shold go according to enemy position
 **
 ** if current Manheten disctance is the same as previous one
@@ -37,8 +32,8 @@ char	figure_view(t_game *game)
 
 int		manheten_dist(int i, int j, int x, int y)
 {
-	int 		first_mod;
-	int 		second_mod;
+	int		first_mod;
+	int		second_mod;
 
 	if (i == -1)
 		return (-1);
@@ -51,34 +46,48 @@ int		manheten_dist(int i, int j, int x, int y)
 	return (first_mod + second_mod);
 }
 
+bool	attack_right_left(t_game *game, t_map *map, int **yx)
+{
+	if (ENEMY_FROM_RIGHT)
+	{
+		if (right_wall(game, map, yx, game->reset))
+			return (true);
+	}
+	else
+		if (left_wall(game, map, yx, game->reset))
+			return (true);
+	return (false);
+}
+
+bool	attack_top_bottom(t_game *game, t_map *map, int **yx)
+{
+	if (ENEMY_FROM_BOTTOM)
+	{
+		if (bottom(game, map, yx, game->reset))
+			return (true);
+	}
+	else
+		if (top(game, map, yx, game->reset))
+			return (true);
+	return (false);
+}
+
 bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
 {
+	int		*yx[2];
 
-		if ((figure_view(game) == 'h' && (!game->hit_right && !game->hit_left)) ||
-			(game->hit_top || game->hit_bottom))
-		{
-			if (ENEMY_FROM_RIGHT)
-			{
-				if (right_wall(game, map, y, x, game->reset))
-					return (true);
-			}
-			else
-				if (left_wall(game, map, y, x, game->reset))
-					return (true);
-		}
-		else
-		{
-			if (ENEMY_FROM_BOTTOM)
-			{
-				if (bottom(game, map, y, x, game->reset))
-					return (true);
-			}
-			else
-			{
-				if (top(game, map, y, x, game->reset))
-					return (true);
-			}
-		}
+	yx[0] = y;
+	yx[1] = x;
+	if (((game->fig_max_y < game->fig_max_x)
+	&& (!game->hit_right && !game->hit_left)) ||
+		(game->hit_top || game->hit_bottom))
+	{
+		if (attack_right_left(game, map, yx))
+			return (true);
+	}
+	else
+		if (attack_top_bottom(game, map, yx))
+			return (true);
 	game->reset = (game->stop_checking) ? 0 : 1;
 	return (false);
 }

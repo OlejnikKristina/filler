@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:52 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 19:55:50 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 22:07:21 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int		target_bottom(t_map *map, char game_chr)
 {
 	int		x;
 	int		y;
-	bool	game_right;
 
 	y = 0;
 	x = 4;
@@ -38,7 +37,7 @@ int		target_bottom(t_map *map, char game_chr)
 	return (x);
 }
 
-bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
+bool	bottom(t_game *game, t_map *map, int **yx, bool reset)
 {
 	int static		pre_x;
 	int static		pre_y;
@@ -48,23 +47,21 @@ bool	bottom(t_game *game, t_map *map, int *y, int *x, bool reset)
 		reset_values(&pre_x, &pre_y, &manh_dst);
 	if (game->stop_checking)
 	{
-		*x = pre_x;
-		*y = pre_y;
+		*yx[0] = pre_y;
+		*yx[1] = pre_x;
 		reset_values(&pre_x, &pre_y, &manh_dst);
 		if (ft_strchr(map->map[map->max_y - 1], map->player))
 		{
 			game->hit_bottom = true;
-			ft_dprintf(fd_test, "Hit target --> BOTTOM\n");
 			return (true);
 		}
-		ft_dprintf(fd_test, "Target --> BOTTOM\n");
 		return (false);
 	}
-	if (manheten_dist(map->max_y, target_bottom(map, map->enemy), *x, *y) <= manh_dst)
+	if (manheten_dist(map->max_y, target_bottom(map, map->enemy), *yx[1], *yx[0]) <= manh_dst)
 	{
-		pre_x = *x;
-		pre_y = *y;
-		manh_dst = manheten_dist(map->max_y, target_bottom(map, map->enemy), *x, *y);
+		pre_y = *yx[0];
+		pre_x = *yx[1];
+		manh_dst = manheten_dist(map->max_y, target_bottom(map, map->enemy), *yx[1], *yx[0]);
 	}
 	return (false);
 }

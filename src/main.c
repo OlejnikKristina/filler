@@ -6,19 +6,12 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 19:42:02 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 21:12:20 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-/*
-if (PRINT)
-{
-	enemy->target_hit = 1;
-	enemy->square.x = 31;
-	enemy->square.y = 14;
-}
-*/
+
 void	init_player(t_map *map)
 {
 	char	*line;
@@ -29,7 +22,7 @@ void	init_player(t_map *map)
 	ft_strdel(&line);
 }
 
-void		init_map_size(t_map *map)
+void	init_map_size(t_map *map)
 {
 	char	*line;
 
@@ -40,7 +33,7 @@ void		init_map_size(t_map *map)
 	ft_strdel(&line);
 }
 
-int		main()
+int		main(void)
 {
 	t_map		map;
 	t_figure	figure;
@@ -49,16 +42,13 @@ int		main()
 	init_player(&map);
 	init_map_size(&map);
 	ft_bzero((void *)&game, sizeof(game));
-	fd_test = open(TEST_FILE, O_RDWR);
 	while (1)
 	{
-		if (read_map(&map) == false)
+		if (!read_map(&map))
 			return (0);
 		read_figure(&figure, &game);
-		game.fig_max_x = ft_strlen(figure.cut_fig[0]);
-		game.fig_max_y = figure.cut_y;
 		find_possible_spot(&map, &figure, &game);
-		clean_data(&map, &figure, &game);
+		clean_data(&map, &figure);
 	}
 	return (0);
 }

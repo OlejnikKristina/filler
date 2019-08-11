@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 19:05:27 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 20:58:29 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	read_figure(t_figure *figure, t_game *game)
 		ft_strdel(&line);
 	}
 	figure->field[y] = NULL;
-	// game->fig_max_x = ft_strlen(figure->cut_fig[0]);
-	// game->fig_max_y = figure->cut_y;
 	cut_figure(figure);
+	game->fig_max_x = ft_strlen(figure->cut_fig[0]);
+	game->fig_max_y = figure->cut_y;
 }
