@@ -6,46 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/08/04 10:14:35 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 23:49:52 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 15:50:23 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/filler.h"
-
-bool			enemy_ran_top(t_game *game, t_map *map)
-{
-	short int	enemy_topest_pos;
-	short int	my_rightest_pos;
-	short int	y;
-	short int	x;
-
-	y = 0;
-	x = 0;
-	while (y < map->max_y)
-	{
-		if (ft_strchr(map->map[y], map->enemy))
-			enemy_topest_pos = y;
-		y++;
-	}
-	y = 0;
-	while (4 <= x)
-	{
-		while (y < map->max_y)
-		{
-			if (map->map[y][x] == map->player)
-			{
-				my_rightest_pos = y;
-				break ;
-			}
-			y++;
-		}
-		x--;
-		y = 0;
-	}
-	if (enemy_topest_pos < my_rightest_pos - 4)
-		return (true);
-	return (false);
-}
 
 int				target_rw(t_map *map, t_game *game, char enemy_chr)
 {
@@ -65,17 +30,17 @@ int				target_rw(t_map *map, t_game *game, char enemy_chr)
 			y--;
 		}
 	}
-		y = 0;
-		while (y < map->max_y)
+	y = 0;
+	while (y < map->max_y)
+	{
+		if (ft_strchr(map->map[y], enemy_chr))
 		{
-			if (ft_strchr(map->map[y], enemy_chr))
-			{
-				(y != 0) ? y-- : 1;
-				(y != 0) ? y-- : 1;
-				return (y);
-			}
-			y++;
+			(y != 0) ? y-- : 1;
+			(y != 0) ? y-- : 1;
+			return (y);
 		}
+		y++;
+	}
 	return (y);
 }
 

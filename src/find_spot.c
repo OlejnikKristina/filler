@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/10 23:55:10 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/11 16:36:08 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ void	find_spots(t_map *map, t_figure *figure,
 }
 
 bool	closest_enemy_spot(t_map *map, int coord[2], 
-		int *best_x, int *best_y, int *best_manht_dst)
+		int best_coord[2], int *best_manht_dst)
 {
 	int			manh_dst;
 	int			i;
@@ -181,90 +181,65 @@ bool	closest_enemy_spot(t_map *map, int coord[2],
 	}
 	if (manh_dst <= *best_manht_dst)
 	{
-		// best_coord[0] = coord[0];
-		// best_coord[1] = coord[1];
-		*best_y = coord[0];
-		*best_x = coord[1];
+		best_coord[0] = coord[0];
+		best_coord[1]= coord[1];
 		*best_manht_dst = manh_dst;
-		// ft_dprintf(fd_test, "Best coord 1 y[%d] x[%d] mnht[%d]\n",
-		// *best_y, *best_x - 4, *best_manht_dst);
-	
-		// ft_dprintf(fd_test, "     coord 1 y[%d] x[%d]\n",
-		// coord[0], coord[1] - 4);
 	}
 	return ((*best_manht_dst == 0) ? 1 : 0);
 }
 
 /*
-	int static		my_manh_dst;
-	int static		enemy_manh_dst;
-	int	static		enemy_coord[2];
-	int	static		my_coord[2];
-	enemy_coord[0] = y;
-	enemy_coord[0] = x;
-
 	my_coord[0] = y;
-	my_coord[0] = x;
+	my_coord[1] = x;
 	best_coord[0] = y;
 	best_coord[1] = x;
 	Finding the closet position of enemy acording
 	to my current coordinats
-
-	my_manh_dst = 10000;
 */
 
 bool	closest_pos(t_game *game, t_map *map, int *y, int *x)
 {
-	//int static	best_coord[2];
-	int static	best_x;
-	int static	best_y;
+	int static	best_coord[2];
 	int			coord[2];
 	int static	best_manh_dst;
 
 	if (game->stop_checking)
 	{
-		// *y = best_coord[0];
-		// *x = best_coord[1];
-		*y = best_y;
-		*x = best_x;
-		// ft_dprintf(fd_test, "Closest to enemy coordinats y%d x%d best_mnht %d\n",
-		// *y - y_cut_top, *x - x_cut_left - 4, best_manh_dst);
-		best_manh_dst = 1000;
-		best_y = 0;
-		best_x = 0;
+		*y = best_coord[0];
+		*x = best_coord[1];
+		//best_manh_dst = 1000;
+		reset_values(&best_coord[1], &best_coord[0], &best_manh_dst);
+		// best_coord[0] = 0;
+		// best_coord[1] = 0;
 	}
 	if (best_manh_dst == 0)
 	{
 		best_manh_dst = 1000;
 		return (true);
 	}
-	(game->reset == 0) ? reset_values(&best_x, &best_y, &best_manh_dst) : 1;
-	coord[0] = *y;//0
-	coord[1] = *x;//1
-	closest_enemy_spot(map, coord, &best_x, &best_y, &best_manh_dst);
-	// ft_dprintf(fd_test, "Best coord 2 y[%d] x[%d] [%d]\n\n",
-	// 	best_y, best_x, best_manh_dst);
+	(game->reset == 0) ?
+	reset_values(&best_coord[1], &best_coord[0], &best_manh_dst) : 1;
+	coord[0] = *y;
+	coord[1] = *x;
+	closest_enemy_spot(map, coord, best_coord, &best_manh_dst);
 	game->reset = (game->stop_checking) ? 0 : 1;
-	game->stop_checking = false;
 	return (0);
 }
 
 
 void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 {
-	int static checks;
-
-	checks++;
 	game->stop_checking = false;
-
-	find_spots(map, figure, game, &closest_pos);
-	// if (((game->hit_right && game->hit_left) &&
-	// 	(game->hit_top || game->hit_bottom))) //|| (300 < checks && checks < 600))
-	// 	find_spots(map, figure, game, &closest_pos);
-	// 	//find_spots(map, figure, game, &closest_pos);
-	// else
-	// 	find_spots(map, figure, game, &surround_enemy);
-	
+	if (map->max_x <= 24)
+	{
+		if (((game->hit_right && game->hit_left) &&
+		(game->hit_top || game->hit_bottom)))
+			find_spots(map, figure, game, &closest_pos);
+		else
+			find_spots(map, figure, game, &surround_enemy);
+	}
+	else
+		find_spots(map, figure, game, &closest_pos);
 	ft_dprintf(fd_test, "r%dl%dt%db%d ",
 	game->hit_right, game->hit_left, game->hit_top, game->hit_bottom);
 }
