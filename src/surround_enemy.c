@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 23:58:08 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/12 00:00:02 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,10 @@ bool	attack_right_left(t_game *game, t_map *map, int **yx)
 			return (true);
 	}
 	else
+	{
 		if (left_wall(game, map, yx, game->reset))
 			return (true);
+	}
 	return (false);
 }
 
@@ -67,8 +69,10 @@ bool	attack_top_bottom(t_game *game, t_map *map, int **yx)
 			return (true);
 	}
 	else
+	{
 		if (top(game, map, yx, game->reset))
 			return (true);
+	}
 	return (false);
 }
 
@@ -86,8 +90,10 @@ bool	surround_enemy(t_game *game, t_map *map, int *y, int *x)
 			return (true);
 	}
 	else
+	{
 		if (attack_top_bottom(game, map, yx))
 			return (true);
+	}
 	game->reset = (game->stop_checking) ? 0 : 1;
 	return (false);
 }

@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 23:57:38 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/12 00:04:33 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	increment(int *increment_me, int *add_plus_one)
 	*add_plus_one += 1;
 }
 
-short		max_y_filed(t_map *map, char **cut_figure)
+short	max_y_filed(t_map *map, char **cut_figure)
 {
 	int		y;
 
@@ -28,7 +28,7 @@ short		max_y_filed(t_map *map, char **cut_figure)
 	return (map->max_y - y);
 }
 
-void	set_to_null(int	*set_me_null, int *and_me, bool *me_as_well)
+void	set_to_null(int *set_me_null, int *and_me, bool *me_as_well)
 {
 	*set_me_null = 0;
 	*and_me = 0;

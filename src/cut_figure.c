@@ -6,7 +6,7 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 18:57:03 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/12 00:04:07 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,15 @@ short unsigned	cut_x_left(t_figure *figure)
 
 short unsigned	cut_x_right(t_figure *figure)
 {
-	short unsigned	cut_columns;
-	int				y;
-	int				max_x;
-	int				max_y;
-	bool			star;
+	int			cut_columns;
+	int			y;
+	int			max_x;
+	int			max_y;
+	bool		star;
 
-	cut_columns = 0;
 	max_x = figure->size_x;
 	max_y = figure->size_y;
-	star = 0;
-	y = 0;
+	set_to_null(&y, &cut_columns, &star);
 	while (max_x)
 	{
 		max_x--;
@@ -107,7 +105,7 @@ short unsigned	cut_y_bottom(t_figure *figure)
 }
 
 /*
-**left_offset=2;
+**	left_offset=2;
 **	  ⬇	 max_fig_x=1;
 **	  ⬇	  ⬇
 **	|. .|. .|.|⬅ cut_y_top	|2
@@ -115,7 +113,6 @@ short unsigned	cut_y_bottom(t_figure *figure)
 **	|. .|* *|.|⬅ max_fig_y	|2
 **	|. .|* .|.|⬅ max_fig_y	|
 **	|. .|. .|.|⬅ cut_y_bottom|1
-**
 */
 
 void			cut_figure(t_figure *figure)
@@ -135,7 +132,8 @@ void			cut_figure(t_figure *figure)
 	figure->cut_fig = (char **)malloc(sizeof(char *) * max_fig_y + 2);
 	while (y < figure->size_y - cut_y_bottom(figure))
 	{
-		figure->cut_fig[index] = ft_strsub(figure->field[y], left_offset, max_fig_x);
+		figure->cut_fig[index] =
+		ft_strsub(figure->field[y], left_offset, max_fig_x);
 		index++;
 		y++;
 	}
