@@ -165,12 +165,12 @@ input[name=choose_speed]
 .player_x
 {
 	background-color: #8ac6d1;
-	background-image: url(rabbit.svg);
+	background-image: url(../img/rabbit.svg);
 }
 
 .player_o
 {
-	background: url(excited.svg) no-repeat;
+	background: url(../img/excited.svg) no-repeat;
 	background-color: #96F0AC;
 }
 
@@ -217,6 +217,13 @@ input[name=choose_speed]
 	to{top: 0px; left: 430px;}
 }
 
+@keyframes move_to_winner_o
+{
+	from{top:0;left:0;};
+	50% {top: 10px;}
+	to{top: 0px; left: -430px;}
+}
+
 @keyframes jump
 {
 	from{top:30px;};
@@ -225,7 +232,7 @@ input[name=choose_speed]
 
 .grandfa
 {
-	transform: scale(0);
+	transform: scale(1);
 	position: relative;
 	height: 100px;
 	transition: all 3s;
@@ -249,5 +256,5 @@ input[name=choose_speed]
 {
 	transform: scale(1);
 	top: 0px; left: -430px;
-	animation: move_to_winner_x 3s ease-in-out;
+	animation: move_to_winner_o 3s ease-in-out;
 }

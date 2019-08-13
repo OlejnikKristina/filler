@@ -92,9 +92,9 @@ $(document).ready(function()
 	function congratulat_winner()
 	{
 		if (score_player_o < score_player_x)
-		{
 			$("#grandfa").addClass("winner_x");
-		}
+		else
+			$("#grandfa").addClass("winner_o");
 	}
 
 	function add_score()
@@ -109,7 +109,8 @@ $(document).ready(function()
 			congratulat_winner();
 			return (false);
 		}
-		if (Number(got_player_o) < Number(got_player_x) && (Number(got_player_o) != -1))
+		if ((Number(got_player_o) < Number(got_player_x) && (Number(got_player_o) != -1))
+			|| Number(got_player_x == -1))
 		{
 			score_player_o++;
 			$(".score_player_o").text("Scores player O: " + score_player_o);

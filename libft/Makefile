@@ -30,12 +30,11 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
-	@echo "\033[0;32mCreate libft.a from object files\033[0m"
-	ranlib $(NAME)
+	@echo "\033[0;32mCreating libft.a\033[0m"
+	@ranlib $(NAME)
 
 $(OBJ):
 	@clang $(CFLAGS) -c $(addsuffix .c, $(SRC)) -I includes/
-	@echo "\033[0;32mLinking. Create objects file for libft.a\033[0m"
 clean:
 	@rm -f $(OBJ)
 	@echo "\033[0;33mRemove objects files from libft\033[0m"

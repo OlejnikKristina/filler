@@ -6,18 +6,13 @@
 #    By: krioliin <krioliin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/30 16:51:39 by krioliin       #+#    #+#                 #
-#    Updated: 2019/08/11 23:43:17 by krioliin      ########   odam.nl          #
+#    Updated: 2019/08/13 11:06:43 by krioliin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
 NAME			=	krioliin.filler
 CFLAGS			=	-Wall -Wextra -Werror
-LIB				=	../libft/libft.a
-
-INCLUDES		=	../includes/filler.h \
-					../includes/ft_pirntf.h \
-					../includes/ftpf_colors.h \
-					../includes/libft.h
+LIB				=	libft/libft.a
 
 FILES			=	main.c read_map.c find_spot.c additional_funcs.c\
 					read_figure.c cut_figure.c clean_data.c \
@@ -27,12 +22,14 @@ FILES			=	main.c read_map.c find_spot.c additional_funcs.c\
 all: $(NAME)
 
 $(NAME):
-	clang -o $(NAME) -g $(FILES) -I./includes/ $(LIB) $(CFLAGS)
-test:
-	./filler_vm -p1 filler_krioliin/src/krioliin.filler \
-	-p2 players/carli.filler -f maps/map01
-
-fclean:
-	rm -f $(NAME)
-
+	@make -C libft/
+	@clang -o $(NAME) $(addprefix src/, $(FILES)) -Iincludes/ $(LIB) $(CFLAGS)
+	@echo "\033[0;32mCompiling Filler\033[0m"
+clean:
+	@rm -f libft/*.o
+	@echo "\033[0;33mRemove object files\033[0m"
+fclean: clean
+	@rm -f $(NAME)
+	@rm -f $(LIB)
+	@echo "\033[0;33mRemove 'Filler' and 'libft.a'\033[0m"
 re: fclean all
