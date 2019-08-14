@@ -6,11 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 20:58:29 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/14 13:56:14 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/filler.h"
+#include "filler.h"
 
 void	read_figure(t_figure *figure, t_game *game)
 {
@@ -23,7 +23,7 @@ void	read_figure(t_figure *figure, t_game *game)
 	figure->size_x = ft_atoi(&(line[ft_strlen("Piece ")
 	+ count_digit64(figure->size_y) + 1]));
 	ft_strdel(&line);
-	figure->field = (char **)malloc(sizeof(char *) * figure->size_y + 1);
+	figure->field = (char **)ft_memalloc(sizeof(char *) * figure->size_y + 1);
 	while (y < figure->size_y)
 	{
 		get_next_line(STDIN_FILENO, &line);

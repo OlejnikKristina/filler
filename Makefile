@@ -6,7 +6,7 @@
 #    By: krioliin <krioliin@student.codam.nl>         +#+                      #
 #                                                    +#+                       #
 #    Created: 2019/06/30 16:51:39 by krioliin       #+#    #+#                 #
-#    Updated: 2019/08/13 11:06:43 by krioliin      ########   odam.nl          #
+#    Updated: 2019/08/14 13:53:18 by krioliin      ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,16 +14,17 @@ NAME			=	krioliin.filler
 CFLAGS			=	-Wall -Wextra -Werror
 LIB				=	libft/libft.a
 
-FILES			=	main.c read_map.c find_spot.c additional_funcs.c\
-					read_figure.c cut_figure.c clean_data.c \
-					closest_to_enemy_pos.c surround_enemy.c \
-					attack_top.c attack_bottom.c \
-					attack_right.c attack_left.c
+FILES			=	main read_map find_spot additional_funcs\
+					read_figure cut_figure clean_data \
+					closest_to_enemy_pos surround_enemy \
+					attack_top attack_bottom \
+					attack_right attack_left
+
 all: $(NAME)
 
 $(NAME):
 	@make -C libft/
-	@clang -o $(NAME) $(addprefix src/, $(FILES)) -Iincludes/ $(LIB) $(CFLAGS)
+	@clang -o $(NAME) $(addprefix src/, $(FILES:=.c)) -Iincludes/ $(LIB) $(CFLAGS)
 	@echo "\033[0;32mCompiling Filler\033[0m"
 clean:
 	@rm -f libft/*.o

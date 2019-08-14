@@ -6,11 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/12 00:04:07 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/14 14:00:24 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/filler.h"
+#include "filler.h"
 
 short unsigned	cut_x_left(t_figure *figure)
 {
@@ -129,7 +129,7 @@ void			cut_figure(t_figure *figure)
 	max_fig_y = figure->size_y - cut_y_top(figure) - cut_y_bottom(figure);
 	max_fig_x = figure->size_x - cut_x_left(figure) - cut_x_right(figure);
 	figure->cut_x = max_fig_x;
-	figure->cut_fig = (char **)malloc(sizeof(char *) * max_fig_y + 2);
+	figure->cut_fig = (char **)ft_memalloc(sizeof(char *) * max_fig_y + 2);
 	while (y < figure->size_y - cut_y_bottom(figure))
 	{
 		figure->cut_fig[index] =

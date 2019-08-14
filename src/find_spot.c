@@ -6,11 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 23:39:57 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/14 14:00:11 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/filler.h"
+#include "filler.h"
 
 bool	superimpose(char map_chr, bool *cover, t_map *map)
 {
@@ -83,7 +83,7 @@ void	find_spots(t_map *map, t_figure *figure,
 	{
 		while (x < map->max_x + 4)
 		{
-			if (check_spot(map, y, x, figure) && (algorithm(game, map, &y, &x)))
+			if (check_spot(map, y, x, figure) && algorithm(game, map, &y, &x))
 			{
 				print_result(game, figure, y, x);
 				return ;
@@ -103,8 +103,8 @@ void	find_possible_spot(t_map *map, t_figure *figure, t_game *game)
 	game->stop_checking = false;
 	if (map->max_y <= 24)
 	{
-		if (((game->hit_right || game->hit_left) &&
-			(game->hit_top || game->hit_bottom)))
+		if ((game->hit_right || game->hit_left) &&
+			(game->hit_top || game->hit_bottom))
 			find_spots(map, figure, game, &closest_to_enemy_pos);
 		else
 			find_spots(map, figure, game, &surround_enemy);

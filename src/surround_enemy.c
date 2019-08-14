@@ -6,11 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/28 17:49:50 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/12 00:00:02 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/14 13:54:35 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/filler.h"
+#include "filler.h"
 
 void	reset_values(int *pre_x, int *pre_y, int *manh_dst)
 {
@@ -30,7 +30,7 @@ void	reset_values(int *pre_x, int *pre_y, int *manh_dst)
 ** distance = |i - x| + |j - y|
 */
 
-int		manheten_dist(int i, int j, int x, int y)
+int		manhtn_dist(int i, int j, int x, int y)
 {
 	int		first_mod;
 	int		second_mod;

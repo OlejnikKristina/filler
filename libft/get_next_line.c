@@ -1,92 +1,114 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   gnl.c                                              :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: akupriia <akupriia@student.unit.ua>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/03/25 19:19:53 by akupriia          #+#    #+#             */
-/*   Updated: 2019/04/02 14:25:41 by akupriia         ###   ########.fr       */
+/*                                                        ::::::::            */
+/*   get_next_line.c                                    :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: krioliin <marvin@codam.nl>                   +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2019/04/16 18:12:29 by krioliin      #+#    #+#                 */
+/*   Updated: 2019/04/16 18:12:30 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-static int		ft_read(char *buff, t_line *curr)
+t_fd_list	*creat_elem(int fd)
 {
-	int		ret;
-	char	*tmp;
+	t_fd_list *new_elem;
 
-	if (!(ret = read(curr->fd, buff, BUFF_SIZE)))
-		return (0);
-	buff[ret] = '\0';
-	tmp = curr->str;
-	curr->str = ft_strjoin(tmp, buff);
-	ft_strdel(&tmp);
+	new_elem = (t_fd_list *)malloc(sizeof(t_fd_list));
+	if (!new_elem)
+		return (NULL);
+	new_elem->fd = fd;
+	new_elem->tail = ft_strnew(0);
+	new_elem->next = NULL;
+	return (new_elem);
+}
+
+t_fd_list	*find_fd(t_fd_list **top, int fd)
+{
+	t_fd_list *head;
+
+	if (!(*top))
+	{
+		*top = creat_elem(fd);
+		return (*top);
+	}
+	head = *top;
+	while (head->next != NULL)
+	{
+		if (head->fd == fd)
+			return (head);
+		head = head->next;
+	}
+	if (head->fd == fd)
+		return (head);
+	head->next = creat_elem(fd);
+	return (head->next);
+}
+
+int			fd_read(t_fd_list **elem, ssize_t size)
+{
+	ssize_t	byte;
+	char	buff[size + 1];
+	char	*temp;
+
+	ft_bzero(buff, size + 1);
+	if (findchr((*elem)->tail, '\n') > -1)
+		return (1);
+	while ((byte = read((*elem)->fd, buff, BUFF_SIZE)) >= 0)
+	{
+		if (buff[0] != '\0')
+		{
+			if (byte < BUFF_SIZE)
+				buff[byte] = '\0';
+			temp = (*elem)->tail;
+			(*elem)->tail = ft_strjoin((*elem)->tail, buff);
+			free(temp);
+			if (ft_strchr(buff, '\n') || byte == 0)
+				return (1);
+		}
+		if (ft_strlen((*elem)->tail) && byte == 0)
+			return (1);
+		if (byte == 0)
+			return (0);
+	}
+	return (-1);
+}
+
+int			gnl_concat(const int fd, char **line)
+{
+	static t_fd_list	*top;
+	t_fd_list			*elem;
+	int					end;
+	int					ret;
+	int					len;
+
+	elem = find_fd(&top, fd);
+	if ((ret = fd_read(&elem, BUFF_SIZE)) > -1)
+	{
+		if ((end = findchr(elem->tail, '\n')) > -1)
+		{
+			*line = ft_strsub(elem->tail, 0, end);
+			end += 1;
+			len = ft_strlen(&elem->tail[end]);
+			ft_memmove((void *)elem->tail, (const void *)elem->tail + end, len);
+			elem->tail[len] = '\0';
+		}
+		else if ((end = findchr(elem->tail, '\0')) > -1)
+		{
+			*line = ft_strsub(elem->tail, 0, end);
+			if (elem->tail)
+				ft_bzero(elem->tail, ft_strlen(elem->tail));
+		}
+	}
 	return (ret);
 }
 
-static int		ft_ret_line(char **str, char **line)
+int			get_next_line(const int fd, char **line)
 {
-	char	*tmp1;
-	char	*tmp2;
-
-	if (!ft_strlen(*str))
-		return (0);
-	tmp1 = ft_strchr(*str, '\n');
-	*tmp1 = '\0';
-	*line = ft_strdup(*str);
-	tmp2 = *str;
-	*str = ft_strdup(tmp1 + 1);
-	ft_strdel(&tmp2);
-	return (1);
-}
-
-static t_line	*ft_curr(t_line **list, const int fd)
-{
-	t_line	*tmp;
-	t_line	*new;
-
-	tmp = *list;
-	while (tmp)
-	{
-		if (tmp->fd == fd)
-			return (tmp);
-		tmp = tmp->next;
-	}
-	new = (t_line*)malloc(sizeof(t_line));
-	new->str = ft_strnew(0);
-	new->fd = fd;
-	new->next = *list;
-	*list = new;
-	return (new);
-}
-
-int				get_next_line(const int fd, char **line)
-{
-	static t_line	*list = NULL;
-	t_line			*curr;
-	char			buff[BUFF_SIZE + 1];
-	int				xr;
-
-	if (fd < 0 || line == NULL || BUFF_SIZE < 1)
+	if (fd < 0 || !line || BUFF_SIZE < 1)
 		return (-1);
-	ft_bzero(buff, BUFF_SIZE + 1);
-	curr = ft_curr(&list, fd);
-	while (1)
-	{
-		if (ft_strchr(curr->str, '\n'))
-			return (ft_ret_line(&(curr->str), line));
-		if ((xr = ft_read(buff, curr)) == -1)
-			return (-1);
-		if (xr == 0)
-		{
-			if (!ft_strlen(curr->str))
-				return (0);
-			*line = ft_strdup(curr->str);
-			ft_bzero(curr->str, ft_strlen(curr->str));
-			return (1);
-		}
-	}
-	return (1);
+	*line = NULL;
+	return (gnl_concat(fd, line));
 }

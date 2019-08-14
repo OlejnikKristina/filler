@@ -6,11 +6,11 @@
 /*   By: krioliin <krioliin@student.codam.nl>         +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2019/06/30 15:19:11 by krioliin       #+#    #+#                */
-/*   Updated: 2019/08/11 22:11:20 by krioliin      ########   odam.nl         */
+/*   Updated: 2019/08/14 13:56:40 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/filler.h"
+#include "filler.h"
 
 void	map_parse(t_map *map)
 {
@@ -18,7 +18,7 @@ void	map_parse(t_map *map)
 	char	*line;
 
 	y = 0;
-	map->map = (char **)malloc(sizeof(char *) * map->max_y + 1);
+	map->map = (char **)ft_memalloc(sizeof(char *) * map->max_y + 1);
 	while (y < map->max_y)
 	{
 		get_next_line(STDIN_FILENO, &line);

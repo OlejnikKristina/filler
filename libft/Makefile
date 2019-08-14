@@ -2,7 +2,6 @@ NAME			= libft.a
 CFLAGS			= -Wall -Werror -Wextra
 
 FAVORITE		:= atoi itoa ftoa itoa_base
-LST				:= lstadd lstdel lstdelone lstiter lstmap lstnew
 MEM				:= bzero memalloc memcpy memccpy memcmp memchr memdel memmove memset
 OTHER			:= count_digit foreach isalnum isprint isalpha isascii \
 				isdigit range recursive_factorial tolower toupper
@@ -17,7 +16,6 @@ OBJ			:=  $(addsuffix .o, $(addprefix ft_, $(FAVORITE) $(LST) $(MEM) $(OTHER) $(
 				findchr.o kr_count_words.o space.o itoa64.o get_next_line.o
 
 FAVORITE	:= $(addprefix favorite/, $(addprefix ft_, $(FAVORITE)))
-LST			:= $(addprefix lst/, $(addprefix ft_, $(LST)))
 MEM			:= $(addprefix mem/, $(addprefix ft_, $(MEM)))
 OTHER		:= $(addprefix other/, $(addprefix ft_, $(OTHER)))
 PUT			:= $(addprefix put/, $(addprefix ft_, $(PUT)))

@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: krioliin <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2019/04/16 18:12:34 by krioliin       #+#    #+#                */
-/*   Updated: 2019/07/16 15:49:33 by krioliin      ########   odam.nl         */
+/*   Created: 2019/04/16 18:12:34 by krioliin      #+#    #+#                 */
+/*   Updated: 2019/04/16 18:12:36 by krioliin      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# define BUFF_SIZE 1
+# define BUFF_SIZE 1000
 
 typedef struct			s_fd_list
 {
@@ -26,15 +26,6 @@ typedef struct			s_fd_list
 	char				*tail;
 	struct s_fd_list	*next;
 }						t_fd_list;
-
-typedef struct		s_line
-{
-    int				fd;
-    char			*str;
-    struct s_line	*next;
-}					t_line;
-
-int					get_next_line(int fd, char **line);
 
 int						get_next_line(const int fd, char **line);
 
